@@ -1,0 +1,107 @@
+[
+  {
+    "name": "KHUB",
+    "type": "khub",
+    "isEditable": true
+  },
+  {
+    "name": "KHUB MINUS",
+    "type": "khub",
+    "isEditable": true
+  },
+  {
+    "name": "KHUB PLUS",
+    "type": "khub",
+    "isEditable": true
+  },
+  {
+    "name": "KHUB MAX",
+    "type": "khub",
+    "isEditable": true
+  },
+  {
+    "name": "KHUB SUPER MAXX",
+    "type": "khub",
+    "isEditable": true
+  },
+  {
+    "name": "KHUB ON RANGE DATE",
+    "type": "khub",
+    "isEditable": true
+  },
+  {
+    "name": "KHUB OFF RANGE DATE",
+    "type": "khub",
+    "isEditable": true
+  },
+  {
+    "name": "KHUB NORTHERN ON RANGE DATES",
+    "type": "khub",
+    "isEditable": true
+  },
+  {
+    "name": "KHUB NORTHERN OFF RANGE DATES",
+    "type": "khub",
+    "isEditable": true
+  },
+  {
+    "name": "KHUB SOUTHERN ON RANGE DATES",
+    "type": "khub",
+    "isEditable": true
+  },
+  {
+    "name": "KHUB SOUTHERN OFF RANGE DATES",
+    "type": "khub",
+    "isEditable": true
+  },
+  {
+    "name": "LSPL",
+    "type": "khub",
+    "isEditable": true
+  },
+  {
+    "name": "FLEET",
+    "type": "kmart",
+    "isEditable": true
+  },
+  {
+    "name": "SMALL FLEET",
+    "type": "kmart",
+    "isEditable": true
+  },
+  {
+    "name": "ONLINE",
+    "type": "kmart",
+    "isEditable": true
+  },
+  {
+    "name": "ON RANGE DATE",
+    "type": "kmart",
+    "isEditable": true
+  },
+  {
+    "name": "OFF RANGE DATE",
+    "type": "kmart",
+    "isEditable": true
+  },
+  {
+    "name": "NORTHERN ON RANGE DATES",
+    "type": "kmart",
+    "isEditable": true
+  },
+  {
+    "name": "NORTHERN OFF RANGE DATES",
+    "type": "kmart",
+    "isEditable": true
+  },
+  {
+    "name": "SOUTHERN ON RANGE DATES",
+    "type": "kmart",
+    "isEditable": true
+  },
+  {
+    "name": "SOUTHERN OFF RANGE DATES",
+    "type": "kmart",
+    "isEditable": true
+  }
+]

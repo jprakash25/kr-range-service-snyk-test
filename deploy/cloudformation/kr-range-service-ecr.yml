@@ -1,0 +1,51 @@
+---
+# yamllint disable rule:line-length
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "ECR repository for range service"
+Parameters:
+  DevAccountId:
+    Type: String
+  NonProdAccoutId:
+    Type: String
+  ProdAccountId:
+    Type: String
+  ArtefactsAccountId:
+    Type: String
+Resources:
+  RangingToolRangeServiceECRRepository:
+    Type: "AWS::ECR::Repository"
+    Properties:
+      RepositoryName: "rangingtool/kr-range-service"
+      RepositoryPolicyText:
+        Version: '2008-10-17'
+        Statement:
+          - Sid: CurrentAccountPush
+            Effect: Allow
+            Principal:
+              AWS: !Sub 'arn:aws:iam::${AWS::AccountId}:root'
+            Action:
+              - 'ecr:GetDownloadUrlForLayer'
+              - 'ecr:PutImage'
+              - 'ecr:InitiateLayerUpload'
+              - 'ecr:UploadLayerPart'
+              - 'ecr:CompleteLayerUpload'
+          - Sid: AllowPull
+            Effect: Allow
+            Principal:
+              AWS:
+                - !Sub 'arn:aws:iam::${DevAccountId}:root'  # dev
+                - !Sub 'arn:aws:iam::${NonProdAccoutId}:root'  # nonprod
+                - !Sub 'arn:aws:iam::${ProdAccountId}:root'  # prod
+                - !Sub 'arn:aws:iam::${ArtefactsAccountId}:root'  # shared account
+            Action:
+              - 'ecr:GetDownloadUrlForLayer'
+              - 'ecr:BatchGetImage'
+              - 'ecr:BatchCheckLayerAvailability'
+
+
+Outputs:
+  RangingToolRangeServiceECRRepositoryArn:
+    Value: !GetAtt RangingToolRangeServiceECRRepository.Arn
+
+  RangingToolRangeServiceECRRepository:
+    Value: !Ref RangingToolRangeServiceECRRepository

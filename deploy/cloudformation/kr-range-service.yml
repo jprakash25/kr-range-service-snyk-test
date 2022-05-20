@@ -1,0 +1,513 @@
+---
+# yamllint disable rule:line-length
+AWSTemplateFormatVersion: "2010-09-09"
+Description: This stack contains the Inventory Service
+
+Parameters:
+  BillingTag:
+    Description: Used to tag resources because consolidated billing
+    Type: String
+
+  DesiredCount:
+    Description: How many instances of this task should we run across our cluster?
+    Type: Number
+    Default: 1
+
+  EcsBaseStack:
+    Type: String
+    Description: Name of ECS stack
+
+  EcsLoadBalancerStack:
+    Type: String
+    Description: Base Load Balancer stack
+
+  Environment:
+    Type: String
+
+  ServiceName:
+    Type: String
+    Default: kr-range-service
+
+  ProjectName:
+    Type: String
+
+  VpcBaseStack:
+    Type: String
+    Description: Name of VPC stack
+    Default: infra-vpc-base
+
+  ProxyHost:
+    Description: FQDN for proxy used for outbound internet traffic within VPC
+    Type: String
+    Default: proxy.int.sharedsvc.a-sharedinfra.net
+
+  ProxyPort:
+    Description: Proxy port used for outbound internet traffic within VPC
+    Type: String
+    Default: 8080
+
+  NoProxy:
+    Description: NoProxy domains and hosts when using proxy configurations
+    Type: String
+    Default: localhost,.kaccess.net,.kaccess.com.au,.kmtltd.net.au,.compute.internal,.a-sharedinfra.net,s3.ap-southeast-2.amazonaws.com,dynamodb.ap-southeast-2.amazonaws.com,169.254.169.254,169.254.170.2,.ap-southeast-2.elb.amazonaws.com,.elb.ap-southeast-2.amazonaws.com,.secretsmanager.ap-southeast-2.amazonaws.com
+
+  RangeServicePort:
+    Description: The port that the jobs service is available on on the NetworkLoadBalancer
+    Type: Number
+    Default: 9020
+
+  ArtefactsAccountId:
+    Description: Artefacts acct id for pulling the ecr image
+    Type: String
+
+  Path:
+    Description: Path pattern for routing
+    Type: String
+    Default: "/range/*"
+
+  WSPath:
+    Description: Path pattern for routing Websocket upgrade request
+    Type: String
+    Default: "/rangeWS/*"
+
+  S3BucketNamePrefix:
+    Description: Rangingtool bucket name prefix
+    Type: String
+
+  RangeS3BucketsStack:
+    Description: Ranging S3 export bucket name
+    Type: String
+
+  RDSDatabaseStackName:
+    Description: Stack name of Postgres Database
+    Type: String
+
+  DocumentDatabaseStackName:
+    Description: Stack name of Document Database
+    Type: String
+
+  ImageTag:
+    Type: String
+
+  LoggerStackName:
+    Description: Path pattern for routing
+    Type: String
+    Default: "kr-range-service"
+
+  SumoLogShipper:
+    Type: String
+    Default: sumo
+    AllowedValues:
+      - sumo
+
+  SumoLogShipperEnabled:
+    Type: String
+    Default: true
+    AllowedValues:
+      - true
+      - false
+
+  EnablePoller:
+    Type: String
+
+  RangeSnsSqsStack:
+    Type: String
+    Description: Stack for all sqs sns of range service
+
+  TenantID:
+    Type: String
+    Description: Active Directory Tenant ID
+
+  ClientID:
+    Type: String
+    Description: Active Directory Client ID
+
+  IPMClientId:
+    Type: String
+    Description: Active Directory Client ID of IPM
+
+  ADSecret:
+    Description: secret name where AD secrets are stored
+    Type: String
+    Default: rangingtool/AD/app/secrets
+
+  CorsUrls:
+    Description: cross origin resource Urls, separated by commas
+    Type: String
+
+  IpmUrl:
+    Description: Domain URL of IPM which maps to ranging endpoint
+    Type: String
+
+  IpmJobStatusPollInterval:
+    Description: How often should IPM job status be polled
+    Type: Number
+
+  ProductServiceClientId:
+    Type: String
+    Description: Active Directory Client ID of Product Service
+
+  ProductServiceUrl:
+    Description: Domain URL of Product Service which maps to ranging endpoint
+    Type: String
+
+Conditions:
+  IsHigherEnv:
+    !Or [
+      !Equals [!Ref Environment, "nonprod"],
+      !Equals [!Ref Environment, "prod"],
+    ]
+
+Resources:
+  Service:
+    Type: AWS::ECS::Service
+    DependsOn: SecuredListenerRule
+    Properties:
+      Cluster:
+        Fn::ImportValue: !Sub ${EcsBaseStack}::ECSCluster
+      Role: !Ref ServiceRole
+      DesiredCount: !Ref DesiredCount
+      TaskDefinition: !Ref TaskDefinition
+      LoadBalancers:
+        - ContainerName: !Sub ${ProjectName}-${ServiceName}
+          ContainerPort: 3000
+          TargetGroupArn: !Ref TargetGroup
+
+  TaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub ${ProjectName}-${ServiceName}
+      TaskRoleArn: !GetAtt TaskRole.Arn
+      ExecutionRoleArn: !GetAtt ExecutionTaskRole.Arn
+      ContainerDefinitions:
+        - Name: !Sub ${ProjectName}-${ServiceName}
+          Essential: true
+          Image: !Sub ${ArtefactsAccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/${ProjectName}/${ServiceName}:${ImageTag}
+          Memory: 1024
+          PortMappings:
+            - ContainerPort: 3000
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref CloudWatchLogsGroup
+              awslogs-region: !Ref AWS::Region
+          Environment:
+            - Name: HTTPS_PROXY
+              Value: !Sub "http://${ProxyHost}:${ProxyPort}"
+            - Name: PROXY_HOST
+              Value: !Ref ProxyHost
+            - Name: PROXY_PORT
+              Value: !Ref ProxyPort
+            - Name: AWS_REGION
+              Value: !Ref AWS::Region
+            - Name: NODE_ENV
+              Value: production
+            - Name: ENVIRONMENT
+              Value: !Ref Environment
+            - Name: NO_PROXY
+              Value: !Ref NoProxy
+            - Name: STACK_NAME
+              Value: !Ref LoggerStackName
+            - Name: RANGE_EXPORT_BUCKET_NAME
+              Value:
+                Fn::ImportValue: !Sub ${RangeS3BucketsStack}::RangeExportsBucketName
+            - Name: RANGE_INPUT_BUCKET_NAME
+              Value:
+                Fn::ImportValue: !Sub ${RangeS3BucketsStack}::RangeServiceInputBucket
+            - Name: RANGE_INFO_BUCKET_NAME
+              Value:
+                Fn::ImportValue: !Sub ${RangeS3BucketsStack}::RangeInfoBucket
+            - Name: CDS_RANGE_SERVICE_INPUT_QUEUE_URL
+              Value:
+                Fn::ImportValue: !Sub ${RangeSnsSqsStack}::CoreDataRangeInputQueueUrl
+            - Name: ENABLE_POLLER
+              Value: !Ref EnablePoller
+            - Name: AD_TENANT_ID
+              Value: !Ref TenantID
+            - Name: AD_CLIENT_ID
+              Value: !Ref ClientID
+            - Name: AD_CLIENT_SECRET
+              Value: !Sub "{{resolve:secretsmanager:${ADSecret}:SecretString:token}}"
+            - Name: CORS_URLS
+              Value: !Ref CorsUrls
+            - Name: IPM_CLIENT_ID
+              Value: !Ref IPMClientId
+            - Name: IPM_URL
+              Value: !Ref IpmUrl
+            - Name: IPM_JOB_STATUS_POLL_INTERVAL
+              Value: !Ref IpmJobStatusPollInterval
+            - Name: PRODUCT_SERVICE_CLIENT_ID
+              Value: !Ref ProductServiceClientId
+            - Name: PRODUCT_SERVICE_URL
+              Value: !Ref ProductServiceUrl
+          Secrets:
+            - Name: PG_CONFIG
+              ValueFrom:
+                Fn::ImportValue: !Sub ${RDSDatabaseStackName}::RDSRangeDatabaseCredential
+            - Name: DOC_DB_CONFIG
+              ValueFrom:
+                Fn::ImportValue: !Sub ${DocumentDatabaseStackName}::DocDBRangeServiceCredential
+
+  CloudWatchLogsGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /project/${AWS::StackName}
+      RetentionInDays: 365
+
+  TagLogGroupFunction:
+    Condition: IsHigherEnv
+    Type: "Custom::tagloggroup"
+    Properties:
+      ServiceToken: !ImportValue infra-cfnresource-cloudwatchtagger::FunctionArn
+      LogGroupName: !Ref CloudWatchLogsGroup
+      LogShipper: !Ref SumoLogShipper
+      Enable: !Ref SumoLogShipperEnabled
+
+  TaskRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${ProjectName}-${Environment}-${ServiceName}-task-role
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Action:
+              - sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service:
+                - ecs-tasks.amazonaws.com
+      ManagedPolicyArns:
+        - !Sub arn:aws:iam::${AWS::AccountId}:policy/RangingtoolSecretsDecryptAccess
+      Policies:
+        - PolicyName: !Sub ${ProjectName}-range-service-import-bucket-policy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - "s3:PutObject"
+                  - "s3:DeleteObject"
+                  - "s3:GetObject"
+                Resource:
+                  - !Sub arn:aws:s3:::${S3BucketNamePrefix}-sample-dev/*
+        - PolicyName: !Sub ${ProjectName}-${Environment}-${ServiceName}-cds-queue-policy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - sqs:ReceiveMessage
+                  - sqs:DeleteMessage
+                Resource:
+                  - Fn::ImportValue: !Sub ${RangeSnsSqsStack}::CoreDataRangeInputQueue
+        - PolicyName: !Sub ${ProjectName}-${Environment}-${ServiceName}-range-input-policy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - "s3:PutObject"
+                  - "s3:GetObject"
+                Resource:
+                  - !Join
+                    - ""
+                    - - "arn:aws:s3:::"
+                      - Fn::ImportValue: !Sub ${RangeS3BucketsStack}::RangeServiceInputBucket
+                      - "/*"
+        - PolicyName: !Sub ${ProjectName}-${Environment}-${ServiceName}-bucket-policy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - "s3:PutObject"
+                  - "s3:DeleteObject"
+                  - "s3:GetObject"
+                Resource:
+                  - !Join
+                    - ""
+                    - - "arn:aws:s3:::"
+                      - Fn::ImportValue: !Sub ${RangeS3BucketsStack}::RangeExportsBucketName
+                      - "/*"
+        - PolicyName: !Sub ${ProjectName}-${Environment}-${ServiceName}-range-info-policy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - "s3:PutObject"
+                  - "s3:GetObject"
+                  - "s3:ListBucket"
+                Resource:
+                  - !Join
+                    - ""
+                    - - "arn:aws:s3:::"
+                      - Fn::ImportValue: !Sub ${RangeS3BucketsStack}::RangeInfoBucket
+                      - "/*"
+
+  ExecutionTaskRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${ProjectName}-${Environment}-${ServiceName}-execution-role
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - ecs-tasks.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      ManagedPolicyArns:
+        - !Sub arn:aws:iam::${AWS::AccountId}:policy/RangingtoolSecretsDecryptAccess
+        - arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy
+
+  ServiceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub ${ProjectName}-${Environment}-${ServiceName}-service-role
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ecs.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      ManagedPolicyArns:
+        - !Sub arn:aws:iam::${AWS::AccountId}:policy/RangingtoolECSServiceAccess
+
+  SecuredListenerRule:
+    Type: AWS::ElasticLoadBalancingV2::ListenerRule
+    Properties:
+      ListenerArn:
+        Fn::ImportValue: !Sub ${EcsLoadBalancerStack}::SecuredALBListener
+      Priority: 3
+      Conditions:
+        - Field: path-pattern
+          Values:
+            - !Ref Path
+      Actions:
+        - TargetGroupArn: !Ref TargetGroup
+          Type: forward
+
+  ListenerRule:
+    Type: AWS::ElasticLoadBalancingV2::ListenerRule
+    Properties:
+      ListenerArn:
+        Fn::ImportValue: !Sub ${EcsLoadBalancerStack}::ALBListener
+      Priority: 3
+      Conditions:
+        - Field: path-pattern
+          Values:
+            - !Ref Path
+      Actions:
+        - TargetGroupArn: !Ref TargetGroup
+          Type: forward
+
+  SecuredListenerRuleWS:
+    Type: AWS::ElasticLoadBalancingV2::ListenerRule
+    Properties:
+      ListenerArn:
+        Fn::ImportValue: !Sub ${EcsLoadBalancerStack}::SecuredALBListener
+      Priority: 4
+      Conditions:
+        - Field: path-pattern
+          Values:
+            - !Ref WSPath
+      Actions:
+        - TargetGroupArn: !Ref TargetGroup
+          Type: forward
+
+  ListenerRuleWS:
+    Type: AWS::ElasticLoadBalancingV2::ListenerRule
+    Properties:
+      ListenerArn:
+        Fn::ImportValue: !Sub ${EcsLoadBalancerStack}::ALBListener
+      Priority: 4
+      Conditions:
+        - Field: path-pattern
+          Values:
+            - !Ref WSPath
+      Actions:
+        - TargetGroupArn: !Ref TargetGroup
+          Type: forward
+
+  TargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      VpcId:
+        Fn::ImportValue: !Sub ${VpcBaseStack}::VpcId
+      Port: 80
+      Protocol: HTTP
+      Matcher:
+        HttpCode: 200-299
+      HealthCheckIntervalSeconds: 40
+      HealthCheckPath: /healthcheck
+      HealthCheckProtocol: HTTP
+      HealthCheckTimeoutSeconds: 30
+      HealthyThresholdCount: 5
+      TargetGroupAttributes:
+        - Key: deregistration_delay.timeout_seconds
+          Value: "30"
+        - Key: stickiness.enabled
+          Value: "true"
+      Tags:
+        - Key: Name
+          Value: !Sub ${ProjectName}-range-service-target-group
+        - Key: Environment
+          Value:
+            Fn::ImportValue: !Sub ${VpcBaseStack}::VpcEnvironment
+        - Key: Billing
+          Value: !Ref BillingTag
+
+  ApiErrorsMetricFilter:
+    Type: AWS::Logs::MetricFilter
+    Properties:
+      LogGroupName: !Ref CloudWatchLogsGroup
+      FilterPattern: '"error:"'
+      MetricTransformations:
+        - MetricValue: "1"
+          MetricNamespace: !Sub "${ProjectName}-${Environment}-${ServiceName}-metrics"
+          MetricName: !Sub "${Environment}-${ServiceName}-errors-metric"
+
+  ApiExceptionsMetricFilter:
+    Type: AWS::Logs::MetricFilter
+    Properties:
+      LogGroupName: !Ref CloudWatchLogsGroup
+      FilterPattern: Exception
+      MetricTransformations:
+        - MetricValue: "1"
+          MetricNamespace: !Sub "${ProjectName}-${Environment}-${ServiceName}-metrics"
+          MetricName: !Sub "${Environment}-${ServiceName}-exception-metric"
+
+  ApiErrorsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub "${ProjectName}-${Environment}-${ServiceName}-errors-alarm"
+      AlarmDescription: "Alarm if the the range service has any errors in its logs."
+      Namespace: !Sub "${ProjectName}-${Environment}-${ServiceName}-metrics"
+      MetricName: !Sub "${Environment}-${ServiceName}-errors-metric"
+      TreatMissingData: notBreaching
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      Statistic: Sum
+      Period: 60
+      EvaluationPeriods: 1
+
+  ApiExceptionAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub "${ProjectName}-${Environment}-${ServiceName}-exception-alarm"
+      AlarmDescription: "Alarm if the the range service has any exception in its logs."
+      Namespace: !Sub "${ProjectName}-${Environment}-${ServiceName}-metrics"
+      MetricName: !Sub "${Environment}-${ServiceName}-exception-metric"
+      TreatMissingData: notBreaching
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      Statistic: Sum
+      Period: 60
+      EvaluationPeriods: 1

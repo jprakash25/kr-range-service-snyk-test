@@ -1,0 +1,346 @@
+---
+# yamllint disable rule:line-length
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Common stack for all lambda functions used in range service
+
+Parameters:
+  ArtefactBucket:
+    Type: String
+    Default: kmartau-rangingtool-artefacts
+
+  BillingTag:
+    Description: Used to split a consolidated bill by project
+    Type: String
+    Default: rangingtool
+
+  ProjectName:
+    Description: Name of this project
+    Type: String
+    Default: rangingtool
+
+  LambdaFolderName:
+    Description: The parent folder in artefacts bucket which will hold all of current project artefacts
+    Type: String
+    Default: kr-range-service
+
+  VpcBaseStack:
+    Type: String
+    AllowedPattern: "[A-Za-z][A-Za-z0-9-]{0,127}"
+    Default: infra-vpc-base
+
+  LogLevel:
+    Description: Log Level for the Bunyan Lib. Valid values at https://www.npmjs.com/package/bunyan#levels
+    Type: String
+    Default: info
+
+  LambdaMemorySize:
+    Description: The memory allocation for the adapter lambda in MB
+    Type: Number
+    MinValue: 128
+    MaxValue: 3008
+    Default: 256
+
+  LambdaTimeoutInSeconds:
+    Description: The execution timeout for the adapter lambda in seconds
+    Type: Number
+    MinValue: 1
+    MaxValue: 900
+    Default: 600
+
+  ProxyHost:
+    Description: FQDN for proxy used for outbound internet traffic within VPC
+    Type: String
+    Default: proxy.int.sharedsvc.a-sharedinfra.net
+
+  ProxyPort:
+    Description: Proxy port used for outbound internet traffic within VPC
+    Type: String
+    Default: "8080"
+
+  NoProxy:
+    Description: NoProxy domains and hosts when using proxy configurations
+    Type: String
+    Default: localhost,.kaccess.net,.kaccess.com.au,.kmtltd.net.au,.compute.internal,.a-sharedinfra.net,s3.ap-southeast-2.amazonaws.com,dynamodb.ap-southeast-2.amazonaws.com,169.254.169.254,169.254.170.2,.ap-southeast-2.elb.amazonaws.com,.elb.ap-southeast-2.amazonaws.com
+
+  Environment:
+    Description: The environment of the application
+    Type: String
+
+  S3BucketNamePrefix:
+    Description: S3 Bucket name prefix
+    Type: String
+
+  EcsLoadBalancerStack:
+    Description: ECS Load Balancer Stack
+    Type: String
+
+  LambdaBuildTag:
+    Description: Lambda Build Tag
+    Type: String
+
+  IpmTriggerState:
+    Description: Enable or disable IPM lambda trigger
+    Type: String
+
+  KmartIpmTriggerState:
+    Description: Enable or disable Kmart IPM Upload lambda trigger
+    Type: String
+
+Resources:
+  RangeLambdaSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Used by Lambda functions that access to resources in VPC
+      VpcId:
+        Fn::ImportValue: !Sub ${VpcBaseStack}::VpcId
+      SecurityGroupEgress:
+        - Description: "AWS Proxy Server"
+          FromPort: 8080
+          ToPort: 8080
+          IpProtocol: "6"
+          CidrIp: 10.240.8.0/21
+        - Description: "AWS Proxy Server"
+          FromPort: 9020
+          ToPort: 9020
+          IpProtocol: "6"
+          CidrIp: 0.0.0.0/0
+        - Description: "AWS Proxy Server wpad"
+          FromPort: 80
+          ToPort: 80
+          IpProtocol: "6"
+          CidrIp: 10.0.0.0/8
+        - Description: "DNS Masq in Sharedsvc"
+          FromPort: 53
+          ToPort: 53
+          IpProtocol: "6"
+          CidrIp: 10.240.8.0/21
+        - Description: "DNS Masq in Sharedsvc"
+          FromPort: 53
+          ToPort: 53
+          IpProtocol: "17"
+          CidrIp: 10.240.8.0/21
+        - Description: "HTTPS Application Requests"
+          FromPort: 443
+          ToPort: 443
+          IpProtocol: tcp
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: !Sub ${ProjectName}-${Environment}-range-lambda-sg
+        - Key: Billing
+          Value: !Ref BillingTag
+
+  RangingtoolTaggedDataDeltaUploadRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: "/"
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
+        - arn:aws:iam::aws:policy/AWSXrayFullAccess
+        - !Sub arn:aws:iam::${AWS::AccountId}:policy/RangingtoolSecretsDecryptAccess
+      Policies:
+        - PolicyName: rangingtool-tagged-data-delta-upload
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                Resource:
+                  - !Sub arn:aws:s3:::${S3BucketNamePrefix}-${Environment}-range-info
+              - Effect: Allow
+                Action:
+                  - 'logs:CreateLogGroup'
+                  - 'logs:CreateLogStream'
+                  - 'logs:PutLogEvents'
+                Resource: 'arn:aws:logs:*:*:*'
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                Resource:
+                  - !Sub arn:aws:s3:::${ArtefactBucket}
+
+  RangingKmartTaggedDataDeltaUploadLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        S3Bucket: !Ref ArtefactBucket
+        S3Key: !Sub ${LambdaFolderName}/range-lambda/kr-range-lambda-${LambdaBuildTag}.zip
+      FunctionName: !Sub ${ProjectName}-kmart-tagged-data-delta-upload-lambda
+      Role: !GetAtt RangingtoolTaggedDataDeltaUploadRole.Arn
+      Runtime: nodejs12.x
+      Timeout: !Ref LambdaTimeoutInSeconds
+      Handler: index.kmartTaggedDataHandler
+      MemorySize: !Ref LambdaMemorySize
+      VpcConfig:
+        SecurityGroupIds:
+          - !Ref RangeLambdaSecurityGroup
+        SubnetIds:
+          - Fn::ImportValue: !Sub ${VpcBaseStack}::SubnetIdPrivateAz1
+          - Fn::ImportValue: !Sub ${VpcBaseStack}::SubnetIdPrivateAz2
+          - Fn::ImportValue: !Sub ${VpcBaseStack}::SubnetIdPrivateAz3
+      Environment:
+        Variables:
+          NODE_ENV: production
+          HTTP_PROXY: !Sub http://${ProxyHost}:${ProxyPort}
+          HTTPS_PROXY: !Sub http://${ProxyHost}:${ProxyPort}
+          NO_PROXY: !Ref NoProxy
+          LOG_LEVEL: !Ref LogLevel
+          ENVIRONMENT: !Ref Environment
+          LOAD_BALANCER_URL:
+            Fn::ImportValue: !Sub ${EcsLoadBalancerStack}::LoadBalancerUrl
+
+  RangingtoolTaggedDataDeltaUploadLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        S3Bucket: !Ref ArtefactBucket
+        S3Key: !Sub ${LambdaFolderName}/range-lambda/kr-range-lambda-${LambdaBuildTag}.zip
+      FunctionName: !Sub ${ProjectName}-tagged-data-delta-upload-lambda
+      Role: !GetAtt RangingtoolTaggedDataDeltaUploadRole.Arn
+      Runtime: nodejs12.x
+      Timeout: !Ref LambdaTimeoutInSeconds
+      Handler: index.taggedDataHandler
+      MemorySize: !Ref LambdaMemorySize
+      VpcConfig:
+        SecurityGroupIds:
+          - !Ref RangeLambdaSecurityGroup
+        SubnetIds:
+          - Fn::ImportValue: !Sub ${VpcBaseStack}::SubnetIdPrivateAz1
+          - Fn::ImportValue: !Sub ${VpcBaseStack}::SubnetIdPrivateAz2
+          - Fn::ImportValue: !Sub ${VpcBaseStack}::SubnetIdPrivateAz3
+      Environment:
+        Variables:
+          NODE_ENV: production
+          HTTP_PROXY: !Sub http://${ProxyHost}:${ProxyPort}
+          HTTPS_PROXY: !Sub http://${ProxyHost}:${ProxyPort}
+          NO_PROXY: !Ref NoProxy
+          LOG_LEVEL: !Ref LogLevel
+          ENVIRONMENT: !Ref Environment
+          LOAD_BALANCER_URL:
+            Fn::ImportValue: !Sub ${EcsLoadBalancerStack}::LoadBalancerUrl
+
+  RangingtoolKmartTaggedDataDeltaLambdaScheduledRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: "Rangingtool Range Data IPM Lambda Scheduled Rule"
+      ScheduleExpression: "cron(0 7 * * ? *)"
+      State: !Ref KmartIpmTriggerState
+      Targets:
+        -
+          Arn: !GetAtt RangingKmartTaggedDataDeltaUploadLambda.Arn
+          Id: "RangingtoolKmartTaggedDataDeltaUpload"
+
+  RangingtoolTaggedDataLambdaScheduledRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: "Rangingtool Tagged Data Lambda Scheduled Rule"
+      ScheduleExpression: "cron(0 8 * * ? *)"
+      State: !Ref IpmTriggerState
+      Targets:
+        -
+          Arn: !GetAtt RangingtoolTaggedDataDeltaUploadLambda.Arn
+          Id: "RangingtoolTaggedDataDeltaUpload"
+
+  RangingtoolEventKmartTaggedDataDeltaLambdaInvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref RangingKmartTaggedDataDeltaUploadLambda
+      Action: lambda:InvokeFunction
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt RangingtoolKmartTaggedDataDeltaLambdaScheduledRule.Arn
+
+  RangingtoolEventTaggedDataLambdaInvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref RangingtoolTaggedDataDeltaUploadLambda
+      Action: lambda:InvokeFunction
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt RangingtoolTaggedDataLambdaScheduledRule.Arn
+
+  RangingtoolUpdateValidProductLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        S3Bucket: !Ref ArtefactBucket
+        S3Key: !Sub ${LambdaFolderName}/range-lambda/kr-range-lambda-${LambdaBuildTag}.zip
+      FunctionName: !Sub ${ProjectName}-update-valid-product-lambda
+      Role: !GetAtt RangingtoolTaggedDataDeltaUploadRole.Arn
+      Runtime: nodejs12.x
+      Timeout: !Ref LambdaTimeoutInSeconds
+      Handler: index.validProductHandler
+      MemorySize: !Ref LambdaMemorySize
+      VpcConfig:
+        SecurityGroupIds:
+          - !Ref RangeLambdaSecurityGroup
+        SubnetIds:
+          - Fn::ImportValue: !Sub ${VpcBaseStack}::SubnetIdPrivateAz1
+          - Fn::ImportValue: !Sub ${VpcBaseStack}::SubnetIdPrivateAz2
+          - Fn::ImportValue: !Sub ${VpcBaseStack}::SubnetIdPrivateAz3
+      Environment:
+        Variables:
+          NODE_ENV: production
+          HTTP_PROXY: !Sub http://${ProxyHost}:${ProxyPort}
+          HTTPS_PROXY: !Sub http://${ProxyHost}:${ProxyPort}
+          NO_PROXY: !Ref NoProxy
+          LOG_LEVEL: !Ref LogLevel
+          ENVIRONMENT: !Ref Environment
+          LOAD_BALANCER_URL:
+            Fn::ImportValue: !Sub ${EcsLoadBalancerStack}::LoadBalancerUrl
+
+  RangingtoolValidProductLambdaScheduledRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: "Rangingtool Update Valid Product Lambda Scheduled Rule"
+      ScheduleExpression: "cron(0 0 1 JAN,JUL ? *)"
+      State: "ENABLED"
+      Targets:
+        -
+          Arn: !GetAtt RangingtoolUpdateValidProductLambda.Arn
+          Id: "RangingtoolUpdateValidProduct"
+
+  RangingtoolEventValidProductLambdaInvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref RangingtoolUpdateValidProductLambda
+      Action: lambda:InvokeFunction
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt RangingtoolValidProductLambdaScheduledRule.Arn
+
+Outputs:
+  TaggedDataDeltaUploadLambdaName:
+    Value: !Ref RangingtoolTaggedDataDeltaUploadLambda
+
+  KmartTaggedDataDeltaUploadLambdaName:
+    Value: !Ref RangingKmartTaggedDataDeltaUploadLambda
+
+  KmartTaggedDataDeltaUploadLambdaArn:
+    Value: !GetAtt RangingKmartTaggedDataDeltaUploadLambda.Arn
+    Export:
+      Name: !Sub ${AWS::StackName}::RangingKmartTaggedDataDeltaUploadLambda
+
+  TaggedDataDeltaUploadLambdaArn:
+    Value: !GetAtt RangingtoolTaggedDataDeltaUploadLambda.Arn
+    Export:
+      Name: !Sub ${AWS::StackName}::RangingtoolTaggedDataDeltaUploadLambda
+
+  UpdateValidProductLambdaName:
+    Value: !Ref RangingtoolUpdateValidProductLambda
+
+  UpdateValidProductLambdaArn:
+    Value: !GetAtt RangingtoolUpdateValidProductLambda.Arn
+    Export:
+      Name: !Sub ${AWS::StackName}::RangingtoolUpdateValidProductLambda
+
+  LambdaBuildTag:
+    Value: !Ref LambdaBuildTag

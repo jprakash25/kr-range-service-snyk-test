@@ -1,0 +1,569 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "product_id": "6632c8aa0d6fba104177663135bed01c",
+            "source_id": "D004Y17M08-001318-2",
+            "product_data": {
+                "type": "GM",
+                "year": 2019,
+                "rbu": {
+                    "rbuName": "CLOTHS MEN"
+                },
+                "brand": {
+                    "brandType": {
+                        "code": "PRV",
+                        "name": "Private"
+                    },
+                    "brandLabel": {
+                        "code": "ANKO_177",
+                        "name": "ANKO"
+                    }
+                },
+                "isSet": false,
+                "hanger": {},
+                "option": {
+                    "id": "6632c8aa0d6fba104177663135bed01c",
+                    "sizes": [
+                        {
+                            "apn": 9341105621303,
+                            "size": {
+                                "code": "861",
+                                "name": "SIZE 6",
+                                "label": "6",
+                                "sortSequence": 10
+                            },
+                            "sellPrices": {
+                                "australia": [
+                                    {
+                                        "endDate": "9999-12-31",
+                                        "priceExGst": 7.2727,
+                                        "priceIncGst": 8,
+                                        "effectiveDate": "2018-01-23"
+                                    }
+                                ],
+                                "newZealand": [
+                                    {
+                                        "endDate": "9999-12-31",
+                                        "priceExGst": 6.9565,
+                                        "priceIncGst": 8,
+                                        "effectiveDate": "2018-01-23"
+                                    }
+                                ],
+                                "new Zealand": [
+                                    {
+                                        "endDate": "9999-12-31",
+                                        "priceExGst": 6.9565,
+                                        "priceIncGst": 8,
+                                        "effectiveDate": "2018-01-23"
+                                    }
+                                ]
+                            },
+                            "keycodeNumber": 68426002,
+                            "productStatus": {
+                                "australia": {
+                                    "code": "0",
+                                    "name": "Live"
+                                },
+                                "newZealand": {
+                                    "code": "0",
+                                    "name": "Live"
+                                }
+                            }
+                        },
+                        {
+                            "apn": 9341105621303,
+                            "size": {
+                                "code": "861",
+                                "name": "SIZE 6",
+                                "label": "6",
+                                "sortSequence": 10
+                            },
+                            "sellPrices": {
+                                "australia": [
+                                    {
+                                        "endDate": "9999-12-31",
+                                        "priceExGst": 7.2727,
+                                        "priceIncGst": 8,
+                                        "effectiveDate": "2018-01-23"
+                                    }
+                                ],
+                                "newZealand": [
+                                    {
+                                        "endDate": "9999-12-31",
+                                        "priceExGst": 6.9565,
+                                        "priceIncGst": 8,
+                                        "effectiveDate": "2018-01-23"
+                                    }
+                                ],
+                                "new Zealand": [
+                                    {
+                                        "endDate": "9999-12-31",
+                                        "priceExGst": 6.9565,
+                                        "priceIncGst": 8,
+                                        "effectiveDate": "2018-01-23"
+                                    }
+                                ]
+                            },
+                            "keycodeNumber": 68426003,
+                            "productStatus": {
+                                "australia": {
+                                    "code": "0",
+                                    "name": "Live"
+                                },
+                                "newZealand": {
+                                    "code": "0",
+                                    "name": "Live"
+                                }
+                            }
+                        }
+                    ],
+                    "sequence": 46,
+                    "primaryColour": {
+                        "code": "1",
+                        "name": "OPTION"
+                    },
+                    "secondaryColour": {
+                        "name": "CANCEL 2"
+                    },
+                    "colourDescription": "CANCEL 2"
+                },
+                "season": {
+                    "code": "N",
+                    "name": "Non-Seasonal"
+                },
+                "tagType": {
+                    "code": "01",
+                    "name": "Normal Tag"
+                },
+                "sizeType": {
+                    "code": "17",
+                    "name": "A04 - WOMENS SIZES APPARE",
+                    "category": 9
+                },
+                "gradeCode": "C",
+                "materials": [],
+                "orderLine": {
+                    "code": "W",
+                    "name": "Warehouse"
+                },
+                "ageGrading": "6-18",
+                "basicStock": {
+                    "code": "0",
+                    "name": "0"
+                },
+                "dssProduct": {
+                    "refNo": "D004Y17M08-001318-2",
+                    "itemNo": "04W18KSS372",
+                    "version": 113,
+                    "documentStatus": "active",
+                    "workFlowStatus": "Final",
+                    "itemDescription": "T_PRINT TABLE TEE",
+                    "integrationStatus": "Registered",
+                    "itemNotesAndInstructions": "Basic Product Info: CVC 140GSM\nREPLACE KSS564, \nItem/Style Comments: KSJ-CVC140 Cotton Poly Jersey 60/40 Ctn/Poly 30'S   140gsm\n\ncost in\n1.solids\n2. heathered yarn marle grey\n3. cross dyed marle colour\n4. heathered yarn marle colour"
+                },
+                "familyTree": {
+                    "class": {
+                        "code": "002",
+                        "name": "SHORT SLEEVE"
+                    },
+                    "family": {
+                        "code": "001",
+                        "name": "KNIT TOPS"
+                    },
+                    "subClass": {
+                        "code": "001",
+                        "name": "BASIC"
+                    },
+                    "department": {
+                        "code": "004",
+                        "name": "WMS KNIT TOPS"
+                    },
+                    "subSubClass": {
+                        "code": "005",
+                        "name": "T-SHIRT"
+                    }
+                },
+                "onShowDate": "2017-10-06",
+                "bp_on_range": "",
+                "fixtureType": {
+                    "code": "T",
+                    "name": "Table Line"
+                },
+                "isAllocated": false,
+                "isPrePriced": false,
+                "keycodeType": "Style",
+                "offShowDate": "9999-12-31",
+                "priceMethod": {
+                    "code": "CL",
+                    "name": "Climatic"
+                },
+                "sellingUnit": {
+                    "code": "EA",
+                    "name": "EACH"
+                },
+                "styleNumber": 135538,
+                "bp_off_range": "",
+                "isForReOrder": false,
+                "isShelfReady": false,
+                "priceTiering": {
+                    "code": "M",
+                    "name": "M-OPP"
+                },
+                "isPriceTagged": true,
+                "shelfLifeDays": 0,
+                "isCarryThrough": false,
+                "isDcConveyable": true,
+                "pluDescription": "T_PRINT TABLE TEE",
+                "countryOfOrigin": {
+                    "code": "BD",
+                    "name": "BD-Bangladesh"
+                },
+                "isDcReplenished": false,
+                "isKeyVolumeLine": true,
+                "sourcingRecords": [
+                    {
+                        "quotes": [
+                            {
+                                "vendor": {
+                                    "code": "V001009",
+                                    "name": "MARINA APPARELS LIMITED",
+                                    "status": "Active",
+                                    "locality": "Overseas",
+                                    "packType": {
+                                        "code": "F",
+                                        "name": "Flat"
+                                    },
+                                    "incoterms": "FCA",
+                                    "vendorAgentType": [
+                                        {
+                                            "code": "KAS",
+                                            "name": "KAS – Vendor"
+                                        }
+                                    ],
+                                    "methodOfTransport": {
+                                        "code": "SEA",
+                                        "name": "Sea"
+                                    }
+                                },
+                                "endDate": "2019-03-12",
+                                "factory": {
+                                    "code": "F002108",
+                                    "name": "Cortz Apparels Ltd.",
+                                    "portOfLoading": {
+                                        "code": "BDCGP",
+                                        "name": "Chittagong"
+                                    },
+                                    "countryOfOrigin": {
+                                        "code": "BD",
+                                        "name": "Bangladesh"
+                                    }
+                                },
+                                "dssQuote": {
+                                    "refNo": "QTE1812-005996",
+                                    "version": 14,
+                                    "workFlowStatus": "Buyer Accept"
+                                },
+                                "homeCost": {
+                                    "cost": 1.5,
+                                    "currency": "USD"
+                                },
+                                "isHazardous": false,
+                                "effectiveDate": "2019-03-04",
+                                "unitsPerInner": 17,
+                                "innersPerOuter": 1,
+                                "isEffectiveNow": false,
+                                "destinationCost": {
+                                    "australia": {
+                                        "currency": "AUD",
+                                        "elcExGst": 2.2023,
+                                        "elcIncGst": 2.4225,
+                                        "gstPercentage": 9
+                                    },
+                                    "newZealand": {
+                                        "currency": "NZD",
+                                        "elcExGst": 2.3831,
+                                        "elcIncGst": 2.7406,
+                                        "gstPercentage": 13
+                                    }
+                                },
+                                "quoteEffectiveDate": "2019-03-04",
+                                "productLeadTimeDays": 0,
+                                "totalCartonQuantity": 17,
+                                "minimumOrderQuantity": 0,
+                                "isTransTasmanShipment": false,
+                                "isFullContainerShipment": false,
+                                "minimumOrderQuantityType": {
+                                    "code": "U",
+                                    "name": "Units"
+                                }
+                            }
+                        ],
+                        "vendor": {
+                            "code": "V001009",
+                            "name": "MARINA APPARELS LIMITED",
+                            "status": "Active",
+                            "locality": "Overseas",
+                            "packType": {
+                                "code": "F",
+                                "name": "Flat"
+                            },
+                            "incoterms": "FCA",
+                            "vendorAgentType": [
+                                {
+                                    "code": "KAS",
+                                    "name": "KAS – Vendor"
+                                }
+                            ],
+                            "methodOfTransport": {
+                                "code": "SEA",
+                                "name": "Sea"
+                            }
+                        },
+                        "factories": [
+                            {
+                                "code": "F002108",
+                                "name": "Cortz Apparels Ltd.",
+                                "portOfLoading": {
+                                    "code": "BDCGP",
+                                    "name": "Chittagong"
+                                },
+                                "countryOfOrigin": {
+                                    "code": "BD",
+                                    "name": "Bangladesh"
+                                }
+                            }
+                        ],
+                        "sourcingAgent": {
+                            "code": "KAS_BD",
+                            "name": "KAS - Bangladesh"
+                        },
+                        "kmartSuppliers": {
+                            "australia": {
+                                "agentName": "KMART AUST LTD BANGLADSH LIAISON OF",
+                                "isKasAgent": true,
+                                "agentNumber": 575560,
+                                "supplierNumber": 551991
+                            },
+                            "newZealand": {
+                                "agentName": "KMART AUST LTD BANGLADSH LIAISON OF",
+                                "isKasAgent": true,
+                                "agentNumber": 575560,
+                                "supplierNumber": 551991
+                            }
+                        },
+                        "targetUnitCost": {
+                            "cost": 1.4,
+                            "currency": "USD"
+                        },
+                        "dssSourcingRecord": {
+                            "refNo": "D004Y17M08-001318SR",
+                            "version": 43,
+                            "workFlowStatus": "Production"
+                        },
+                        "estimatedElcExGst": {
+                            "currency": "AUD"
+                        },
+                        "isDefaultSourcingRecord": true
+                    }
+                ],
+                "brandDescription": "04W18KSS372",
+                "careInstructions": [
+                    {
+                        "image": {
+                            "id": "75d876ee5a790853e0530100007f2c5f"
+                        },
+                        "customer": "KMART",
+                        "description": "Standard print  - Use care code C1X",
+                        "instruction": "Standard print  - Use care code C1X",
+                        "instructionCode": "C1X",
+                        "instructionType": "Apparel Care Instructions"
+                    }
+                ],
+                "isSecurityTagged": false,
+                "minShelfLifeDays": 0,
+                "piecesPerGarment": 1,
+                "distributionMethod": {
+                    "code": "REG",
+                    "name": "Regional"
+                },
+                "flexibleAttributes": [
+                    {
+                        "type": "Sourcing",
+                        "value": {
+                            "code": "01",
+                            "name": "TOP & T.SHIRT"
+                        },
+                        "attribute": {
+                            "code": "XX02",
+                            "name": "C&S KNIT"
+                        }
+                    },
+                    {
+                        "type": "Operational",
+                        "value": {
+                            "code": "51",
+                            "name": "WT11"
+                        },
+                        "attribute": {
+                            "code": "37",
+                            "name": "Table"
+                        }
+                    },
+                    {
+                        "type": "Operational",
+                        "value": {
+                            "code": "5",
+                            "name": "Table"
+                        },
+                        "attribute": {
+                            "code": "09",
+                            "name": "Volume Seller"
+                        }
+                    },
+                    {
+                        "type": "Operational",
+                        "value": {
+                            "code": "1",
+                            "name": "Yes"
+                        },
+                        "attribute": {
+                            "code": "56",
+                            "name": "Overseas Decant"
+                        }
+                    }
+                ],
+                "warningsAndHazards": {
+                    "flammability": {
+                        "code": "0",
+                        "name": "Not Applicable"
+                    }
+                },
+                "instorePresentation": {
+                    "code": "S",
+                    "name": "Shelf"
+                },
+                "replenishmentMethod": {
+                    "code": "R",
+                    "name": "Replenished"
+                },
+                "isOrderedAsAssortment": false,
+                "abbreviatedDescription": "T_PRINT TABLE TEE",
+                "currentSourcingSummary": {
+                    "vendor": {
+                        "code": "V001009",
+                        "name": "MARINA APPARELS LIMITED",
+                        "status": "Active",
+                        "locality": "Overseas",
+                        "packType": {
+                            "code": "F",
+                            "name": "Flat"
+                        },
+                        "incoterms": "FCA",
+                        "vendorAgentType": [
+                            {
+                                "code": "KAS",
+                                "name": "KAS – Vendor"
+                            }
+                        ],
+                        "methodOfTransport": {
+                            "code": "SEA",
+                            "name": "Sea"
+                        }
+                    },
+                    "homeCost": {
+                        "cost": 1.5,
+                        "currency": "USD"
+                    },
+                    "packType": {
+                        "code": "F",
+                        "name": "Flat"
+                    },
+                    "factories": [
+                        {
+                            "code": "F002108",
+                            "name": "Cortz Apparels Ltd.",
+                            "portOfLoading": {
+                                "code": "BDCGP",
+                                "name": "Chittagong"
+                            },
+                            "countryOfOrigin": {
+                                "code": "BD",
+                                "name": "Bangladesh"
+                            }
+                        }
+                    ],
+                    "unitsPerInner": 17,
+                    "innersPerOuter": 1,
+                    "kmartSuppliers": {
+                        "australia": {
+                            "agentName": "KMART AUST LTD BANGLADSH LIAISON OF",
+                            "isKasAgent": true,
+                            "agentNumber": 575560,
+                            "supplierNumber": 551991
+                        },
+                        "newZealand": {
+                            "agentName": "KMART AUST LTD BANGLADSH LIAISON OF",
+                            "isKasAgent": true,
+                            "agentNumber": 575560,
+                            "supplierNumber": 551991
+                        }
+                    },
+                    "dssSourcingRecord": {
+                        "refNo": "D004Y17M08-001318SR",
+                        "version": 43,
+                        "workFlowStatus": "Production"
+                    },
+                    "productLeadTimeDays": 0,
+                    "totalCartonQuantity": 17,
+                    "minimumOrderQuantity": 0,
+                    "destinationCostAndSell": {
+                        "australia": {
+                            "currency": "AUD",
+                            "elcExGst": 2.9733,
+                            "elcIncGst": 3.2706,
+                            "gstPercentage": 9,
+                            "sellPriceExGst": 7.2727,
+                            "sellPriceIncGst": 8,
+                            "marginPercentage": 0.591175
+                        },
+                        "newZealand": {
+                            "currency": "NZD",
+                            "elcExGst": 3.1686,
+                            "elcIncGst": 3.6439,
+                            "gstPercentage": 13,
+                            "sellPriceExGst": 6.9565,
+                            "sellPriceIncGst": 8,
+                            "marginPercentage": 0.5445125
+                        }
+                    },
+                    "isFullContainerShipment": false,
+                    "minimumOrderQuantityType": {
+                        "code": "U",
+                        "name": "Units"
+                    }
+                },
+                "sizeRangeDimensionsDescription": "6-26"
+            },
+            "product_metadata": {
+                "source": "dss-plus",
+                "eventId": "2019-03-19T23:22:25.663Z-ITM1809-000012",
+                "eventType": "dss-product-changed",
+                "timestamp": "2019-03-18T23:22:25.663Z",
+                "causationId": "2019-03-19T23:22:25.663Z-ITM1809-000010",
+                "correlationId": "4fb2eb2f-cd98-47b7-a1a4-630744c97b54"
+            },
+            "type": "GM",
+            "updated_at": "2021-03-02T09:55:31.391Z",
+            "range_data": {
+                "K hub Base": "Y",
+                "K hub Plus": "Y",
+                "K hub Minus": "Y",
+                "K hub Max": "N",
+                "K hub On Range Date": "",
+                "K hub Off Range Date": ""
+            }
+        }
+    ],
+    "reportType": "GM"
+}

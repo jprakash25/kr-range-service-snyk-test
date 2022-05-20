@@ -1,0 +1,212 @@
+{
+  "product_data": {
+    "options": [
+      {
+        "id": "a3e6e5fb36f020b0e043c0a8346e20b0",
+        "sizes": [
+          {
+            "apn": 9300806778600,
+            "size": {
+              "code": "861",
+              "name": "SIZE 6",
+              "label": "6",
+              "sortSequence": 20
+            },
+            "sellPrices": {
+              "australia": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 4.5455,
+                  "priceIncGst": 5,
+                  "effectiveDate": "2013-08-13"
+                }
+              ],
+              "newZealand": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 13.0435,
+                  "priceIncGst": 15,
+                  "effectiveDate": "2012-12-26"
+                }
+              ]
+            },
+            "keycodeNumber": 64017297,
+            "productStatus": {
+              "australia": {
+                "code": "8",
+                "name": "Clearance"
+              },
+              "newZealand": {
+                "code": "8",
+                "name": "Clearance"
+              }
+            }
+          },
+          {
+            "apn": 9300806778617,
+            "size": {
+              "code": "957",
+              "name": "SIZE 7",
+              "label": "7",
+              "sortSequence": 30
+            },
+            "sellPrices": {
+              "australia": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 1.8182,
+                  "priceIncGst": 2,
+                  "effectiveDate": "2014-08-12"
+                }
+              ],
+              "newZealand": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 1.7391,
+                  "priceIncGst": 2,
+                  "effectiveDate": "2013-08-27"
+                }
+              ]
+            },
+            "keycodeNumber": 64017303,
+            "productStatus": {
+              "australia": {
+                "code": "8",
+                "name": "Clearance"
+              },
+              "newZealand": {
+                "code": "8",
+                "name": "Clearance"
+              }
+            }
+          },
+          {
+            "apn": 9300806778624,
+            "size": {
+              "code": "22",
+              "name": "SIZE 8",
+              "label": "8",
+              "sortSequence": 40
+            },
+            "sellPrices": {
+              "australia": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 4.5455,
+                  "priceIncGst": 5,
+                  "effectiveDate": "2013-08-13"
+                }
+              ],
+              "newZealand": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 13.0435,
+                  "priceIncGst": 15,
+                  "effectiveDate": "2012-12-26"
+                }
+              ]
+            },
+            "keycodeNumber": 64017310,
+            "productStatus": {
+              "australia": {
+                "code": "8",
+                "name": "Clearance"
+              },
+              "newZealand": {
+                "code": "8",
+                "name": "Clearance"
+              }
+            }
+          },
+          {
+            "apn": 9300806778631,
+            "size": {
+              "code": "237",
+              "name": "SIZE 9",
+              "label": "9",
+              "sortSequence": 50
+            },
+            "sellPrices": {
+              "australia": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 4.5455,
+                  "priceIncGst": 5,
+                  "effectiveDate": "2013-08-13"
+                }
+              ],
+              "newZealand": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 13.0435,
+                  "priceIncGst": 15,
+                  "effectiveDate": "2012-12-26"
+                }
+              ]
+            },
+            "keycodeNumber": 64017327,
+            "productStatus": {
+              "australia": {
+                "code": "8",
+                "name": "Clearance"
+              },
+              "newZealand": {
+                "code": "8",
+                "name": "Clearance"
+              }
+            }
+          },
+          {
+            "apn": 9300806778648,
+            "size": {
+              "code": "23",
+              "name": "SIZE 10",
+              "label": "10",
+              "sortSequence": 60
+            },
+            "sellPrices": {
+              "australia": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 4.5455,
+                  "priceIncGst": 5,
+                  "effectiveDate": "2013-08-13"
+                }
+              ],
+              "newZealand": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 13.0435,
+                  "priceIncGst": 15,
+                  "effectiveDate": "2012-12-26"
+                }
+              ]
+            },
+            "keycodeNumber": 64017334,
+            "productStatus": {
+              "australia": {
+                "code": "8",
+                "name": "Clearance"
+              },
+              "newZealand": {
+                "code": "8",
+                "name": "Clearance"
+              }
+            }
+          }
+        ],
+        "sequence": 1,
+        "primaryColour": {
+          "code": "150",
+          "name": "WHITE"
+        },
+        "secondaryColour": {
+          "code": null,
+          "name": "WHITE"
+        },
+        "colourDescription": "WHITE"
+      }
+    ],
+    "type": "AP"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "kr-range-lambda",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "private": "true",
+  "test": "jest.config.js",
+  "scripts": {
+    "start": "node $npm_package_main",
+    "test": "yarn lint && jest --config $npm_package_test",
+    "lint": "standard | snazzy",
+    "lint:fix": "standard --fix",
+    "clean": "rm -rf build && rm -f ./dist/*",
+    "prebuild": "yarn clean && mkdir build && cp -r $npm_package_main package.json yarn.lock build",
+    "pack:zip": "yarn prebuild && cd build && yarn --frozen-lockfile --production && mkdir -p ../dist && zip -r ../dist/$npm_package_name.zip ."
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "standard": {
+    "ignore": [
+      "build/**/*.js",
+      "*.test.js"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^26.2.2",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.4"
+  }
+}

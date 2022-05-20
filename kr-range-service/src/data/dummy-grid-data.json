@@ -1,0 +1,1294 @@
+{
+  "data": [
+    {
+      "_id": "60fab7a2fe07fa005230b8a0",
+      "product_id": "beca0781ab654012af07b1bcb59dfc4f",
+      "source_id": "ITM001-0111",
+      "product_source_id": "beca0781ab654012af07b1bcb59dfc4fITM001-0111",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 42735083,
+      "status_code": {
+        "australia": [
+          "4"
+        ],
+        "newZealand": [
+          "0"
+        ]
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "CARDS",
+      "class_name": "EVERYDAY CARDS",
+      "subclass_name": "STANDARD CARDS",
+      "subSubClass_name": "INTERACTIVE",
+      "dssProduct": {
+        "refNo": "ITM001-0111",
+        "itemNo": "ITM001-0111",
+        "version": 6,
+        "createdOn": "9999-09-09T15:32:35.571+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "ANTHEM MALE AWESOME GUYS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "9300728935020"
+      },
+      "isDcReplenished": false,
+      "aus_sell_price": "aus_sell_price",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Shelf",
+      "replenishmentMethod_name": "Vendor-Managed",
+      "tagged_data": {},
+      "created_on": "9999-09-09T04:32:35.571Z",
+      "core_range_dates": {
+        "core_on_range": "17/11/2021",
+        "core_off_range": "31/12/9999"
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab7a2fe07fa005230b896",
+      "product_id": "beca0781ab654012af07b1bcb59dfc4f",
+      "source_id": "ITM001-0112",
+      "product_source_id": "beca0781ab654012af07b1bcb59dfc4fITM001-0112",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 42735083,
+      "status_code": {
+        "australia": [
+          "4"
+        ],
+        "newZealand": [
+          "0"
+        ]
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "CARDS",
+      "class_name": "EVERYDAY CARDS",
+      "subclass_name": "STANDARD CARDS",
+      "subSubClass_name": "INTERACTIVE",
+      "dssProduct": {
+        "refNo": "ITM001-0112",
+        "itemNo": "ITM001-0112",
+        "version": 6,
+        "createdOn": "2099-09-19T15:32:35.571+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "ANTHEM MALE AWESOME GUYS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "9300728935020"
+      },
+      "isDcReplenished": false,
+      "aus_sell_price": "aus_sell_price",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Shelf",
+      "replenishmentMethod_name": "Vendor-Managed",
+      "tagged_data": {},
+      "created_on": "2099-09-19T04:32:35.571Z",
+      "core_range_dates": {
+        "core_on_range": "17/11/2021",
+        "core_off_range": "31/12/9999"
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab7a2fe07fa005230b892",
+      "product_id": "beca0781ab654012af07b1bcb59dfc4f",
+      "source_id": "ITM001-0020",
+      "product_source_id": "beca0781ab654012af07b1bcb59dfc4fITM001-0020",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 42735083,
+      "status_code": {
+        "australia": [
+          "4"
+        ],
+        "newZealand": [
+          "0"
+        ]
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "CARDS",
+      "class_name": "EVERYDAY CARDS",
+      "subclass_name": "STANDARD CARDS",
+      "subSubClass_name": "INTERACTIVE",
+      "dssProduct": {
+        "refNo": "ITM001-0020",
+        "itemNo": "ITM001-0020",
+        "version": 6,
+        "createdOn": "2099-09-19T15:32:35.571+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "ANTHEM MALE AWESOME GUYS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "9300728935020"
+      },
+      "isDcReplenished": false,
+      "aus_sell_price": "aus_sell_price",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Shelf",
+      "replenishmentMethod_name": "Vendor-Managed",
+      "tagged_data": {},
+      "created_on": "2099-09-19T04:32:35.571Z",
+      "core_range_dates": {
+        "core_on_range": "17/11/2021",
+        "core_off_range": "31/12/9999"
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab77ffe07fa0052303f20",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM1810-004002",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM1810-004002",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 93008889,
+      "status_code": {
+        "australia": [
+          "5",
+          "8",
+          "8"
+        ],
+        "newZealand": [
+          "5",
+          "8",
+          "8"
+        ]
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM1810-004002",
+        "itemNo": "IITM1810-004002",
+        "version": 33,
+        "createdOn": "2021-04-27T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "new_zealand_sell_price": "2.5",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2021-04-27T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab7a2fe07fa005230b8f4",
+      "product_id": "da0096ea2fa54207a590ce3549fbafe5",
+      "source_id": "ITM2104-001352",
+      "product_source_id": "da0096ea2fa54207a590ce3549fbafe5ITM2104-001352",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 43071890,
+      "status_code": {
+        "australia": [
+          "0"
+        ],
+        "newZealand": [
+          "0"
+        ]
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "BRANDED WRAP & ACC",
+      "subclass_name": "BAGS",
+      "subSubClass_name": "BAGS",
+      "dssProduct": {
+        "refNo": "ITM2104-001352",
+        "itemNo": "ITM2104-001352",
+        "version": 9,
+        "createdOn": "2021-04-21T08:09:37.845+10:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Adopted",
+        "itemDescription": "CGB MEDIUM KRAFT SPOTS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "APN Details: 9355693014904"
+      },
+      "isDcReplenished": false,
+      "aus_sell_price": "aus_sell_price",
+      "new_zealand_sell_price": "3",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Shelf",
+      "replenishmentMethod_name": "Vendor-Managed",
+      "tagged_data": {
+        "_id": "60fab7ac36ac5f005d7b3247",
+        "khub": "Y",
+        "khub_southern_off_range_dates": "",
+        "khub_southern_on_range_dates": "",
+        "khub_northern_off_range_dates": "",
+        "khub_northern_on_range_dates": "",
+        "khub_off_range_date": "",
+        "khub_on_range_date": "",
+        "khub_super_maxx": "Y",
+        "khub_max": "Y",
+        "khub_minus": "Y",
+        "khub_plus": "Y",
+        "product_source_id": "da0096ea2fa54207a590ce3549fbafe5ITM2104-001352",
+        "type": "khub",
+        "__v": 0,
+        "createdAt": "2021-07-23T12:35:56.314Z",
+        "updatedAt": "2021-07-23T12:35:56.314Z"
+      },
+      "created_on": "2021-04-20T22:09:37.845Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab73afe07fa00522f575b",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM001-0015",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM001-0015",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 93008889,
+      "status_code": {
+        "australia": [
+          "3",
+          "4"
+        ],
+        "newZealand": []
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM001-0015",
+        "itemNo": "ITM001-0015",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab7a2fe07fa005230b934",
+      "product_id": "b1d3caa4cd2f4f21861ef90715f6b20a",
+      "source_id": "ITM2011-110010",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90715f6b20aITM2011-110010",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 41008889,
+      "status_code": {
+        "australia": [
+          "8",
+          "0",
+          "0"
+        ],
+        "newZealand": [
+          "8",
+          "0",
+          "0"
+        ]
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM2011-110010",
+        "itemNo": "ITM2011-100010",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "new_zealand_sell_price": "2.5",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "08/11/2017",
+        "core_off_range": "31/12/9999"
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab73afe07fa00522f583f",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM001-0017",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM001-0017",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 93008889,
+      "status_code": {
+        "australia": [
+          "8",
+          "6"
+        ],
+        "newZealand": []
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM001-0017",
+        "itemNo": "ITM001-0017",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab72dfe07fa00522f2c25",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM001-0013",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM001-0013",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 93008889,
+      "status_code": {
+        "australia": [
+          "8",
+          "4"
+        ],
+        "newZealand": []
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM001-0013",
+        "itemNo": "ITM001-0013",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab737fe07fa00522f4e97",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM001-0018",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM001-0018",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 93008889,
+      "status_code": {
+        "australia": [
+          "3",
+          "0"
+        ],
+        "newZealand": []
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM001-0018",
+        "itemNo": "ITM001-0018",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab7a2fe07fa005230b938",
+      "product_id": "b1d3caa4cd2f4f21861ef90715f6b20a",
+      "source_id": "ITM2011-110011",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90715f6b20aITM2011-110011",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 41008889,
+      "status_code": {
+        "australia": [
+          "8",
+          "0",
+          "0"
+        ],
+        "newZealand": [
+          "8",
+          "0",
+          "0"
+        ]
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM2011-110011",
+        "itemNo": "ITM2011-100011",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "new_zealand_sell_price": "2.5",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "08/11/2017",
+        "core_off_range": "31/12/9999"
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab7a2fe07fa005230b92c",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM2011-000009",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM2011-000009",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 43008889,
+      "status_code": {
+        "australia": [
+          "8",
+          "0",
+          "0"
+        ],
+        "newZealand": [
+          "8",
+          "0",
+          "0"
+        ]
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM2011-000009",
+        "itemNo": "ITM2011-000009",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "new_zealand_sell_price": "2.5",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "08/11/2019",
+        "core_off_range": "21/12/2021"
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab73bfe07fa00522f594b",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM001-0019",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM001-0019",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 93008889,
+      "status_code": {
+        "australia": [
+          "3",
+          "6"
+        ],
+        "newZealand": []
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM001-0019",
+        "itemNo": "ITM001-0019",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab72dfe07fa00522f2acf",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM001-0012",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM001-0012",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 93008889,
+      "status_code": {
+        "australia": [
+          "8",
+          "4"
+        ],
+        "newZealand": []
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM001-0012",
+        "itemNo": "ITM001-0012",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab75dfe07fa00522fcd4d",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM001-0016",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM001-0016",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 93008889,
+      "status_code": {
+        "australia": [
+          "8",
+          "4"
+        ],
+        "newZealand": []
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM001-0016",
+        "itemNo": "ITM001-0016",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab77efe07fa0052303e0b",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM2011-120000",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM2011-120000",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 93008889,
+      "status_code": {
+        "australia": [
+          "5",
+          "8",
+          "8"
+        ],
+        "newZealand": [
+          "5",
+          "8",
+          "8"
+        ]
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM2011-120000",
+        "itemNo": "ITM2011-120000",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "In set",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "new_zealand_sell_price": "2.5",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab7a2fe07fa005230b930",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM2011-100010",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM2011-100010",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 43008889,
+      "status_code": {
+        "australia": [
+          "8",
+          "0",
+          "0"
+        ],
+        "newZealand": [
+          "8",
+          "0",
+          "0"
+        ]
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM2011-100010",
+        "itemNo": "ITM2011-100010",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "new_zealand_sell_price": "2.5",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "08/11/2019",
+        "core_off_range": "21/12/2021"
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab759fe07fa00522fc02a",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM2011-9999900",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM2011-9999900",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 93008889,
+      "status_code": {
+        "australia": [
+          "5",
+          "8"
+        ],
+        "newZealand": []
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM2011-9999900",
+        "itemNo": "ITM2011-9999900",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab72dfe07fa00522f2c28",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM001-0014",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM001-0014",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 93008889,
+      "status_code": {
+        "australia": [
+          "3",
+          "4"
+        ],
+        "newZealand": []
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM001-0014",
+        "itemNo": "ITM001-0014",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab77efe07fa0052303e07",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM2011-110000",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM2011-110000",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 93008889,
+      "status_code": {
+        "australia": [
+          "5",
+          "8",
+          "8"
+        ],
+        "newZealand": [
+          "5",
+          "8",
+          "8"
+        ]
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM2011-110000",
+        "itemNo": "ITM2011-110000",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "In set",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "new_zealand_sell_price": "2.5",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab7a2fe07fa005230b881",
+      "product_id": "b1d3caa4cd2f4f21861ef90615f6b20a",
+      "source_id": "ITM2011-10100",
+      "product_source_id": "b1d3caa4cd2f4f21861ef90615f6b20aITM2011-10100",
+      "type": "GM",
+      "keycode_type": "Single",
+      "keycode": 93008889,
+      "status_code": {
+        "australia": [
+          "4",
+          "8"
+        ],
+        "newZealand": []
+      },
+      "primaryColour_name": "ASSORTED",
+      "secondaryColour_name": "ASSORTED1",
+      "colourDescription": "ASSORTED",
+      "department_code": "025",
+      "family_name": "WRAP & ACC",
+      "class_name": "OWN BRAND WRAP|ACC",
+      "subclass_name": "ACCESSORIES",
+      "subSubClass_name": "RIBBON|BOWS",
+      "dssProduct": {
+        "refNo": "ITM2011-10100",
+        "itemNo": "ITM2011-10100",
+        "version": 33,
+        "createdOn": "2020-11-02T13:23:17.899+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Final",
+        "itemDescription": "F22H1 6PK RIBBONS",
+        "integrationStatus": "Registered",
+        "itemNotesAndInstructions": "Notes / Instructions Info: GOLD/SILVER/ROSE GOLD, 6PCS/PP BAG +HEADER CARD ,12 BAGS/ MASTER CARTON/0.011CBM."
+      },
+      "isDcReplenished": true,
+      "aus_sell_price": "aus_sell_price",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Replenished",
+      "tagged_data": {},
+      "created_on": "2020-11-02T02:23:17.899Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      },
+      "styleNumber": null
+    },
+    {
+      "_id": "60fab77efe07fa0052303dcb",
+      "product_id": "5bed557c59fa4d588a5a275e61d4c135",
+      "source_id": "ITM2010-000511",
+      "product_source_id": "5bed557c59fa4d588a5a275e61d4c135ITM2010-000511",
+      "type": "AP",
+      "keycode_type": "Style",
+      "styleNumber": 154461,
+      "keycode": null,
+      "status_code": {
+        "australia": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "4"
+        ],
+        "newZealand": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "4"
+        ]
+      },
+      "primaryColour_name": "BLUE",
+      "secondaryColour_name": "AQSE BLUE",
+      "colourDescription": "AQSE BLUE",
+      "department_code": "092",
+      "family_name": "BOARDSHORTS",
+      "class_name": "BOARDSHORTS",
+      "subclass_name": "ELASTIC WAIST",
+      "subSubClass_name": "PRINT",
+      "dssProduct": {
+        "refNo": "ITM2010-000511",
+        "itemNo": "92S22BS200",
+        "version": 90,
+        "createdOn": "2020-10-09T14:09:40.243+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Adopted",
+        "itemDescription": "EW MID LENGTH BOARDIE",
+        "integrationStatus": "Pre-Registered",
+        "itemNotesAndInstructions": "PET Bottle Recycled Print Swim Short\n- 100% PET Bottle Recycled Polyester soft microfiber fabric\n- Timeless all over print\n- Relaxed fit\n- Elastic waist with off white drawcord\n- 2 functional side pockets and single back pocket with velcro fastening"
+      },
+      "isDcReplenished": false,
+      "aus_sell_price": "aus_sell_price",
+      "new_zealand_sell_price": "12",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Non-Replenished",
+      "tagged_data": {},
+      "created_on": "2020-10-09T03:09:40.243Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      }
+    },
+    {
+      "_id": "60fab77efe07fa0052303df4",
+      "product_id": "e38eb45584b04d268bfb68d7f80a9045",
+      "source_id": "ITM2010-910511",
+      "product_source_id": "e38eb45584b04d268bfb68d7f80a9045ITM2010-910511",
+      "type": "AP",
+      "keycode_type": "Style",
+      "styleNumber": 154461,
+      "keycode": null,
+      "status_code": {
+        "australia": [
+          "8",
+          "8",
+          "8",
+          "8"
+        ],
+        "newZealand": [
+          "8",
+          "8",
+          "8",
+          "8"
+        ]
+      },
+      "primaryColour_name": "BLACK",
+      "secondaryColour_name": "BLK PALM",
+      "colourDescription": "BLK PALM",
+      "department_code": "092",
+      "family_name": "BOARDSHORTS",
+      "class_name": "BOARDSHORTS",
+      "subclass_name": "ELASTIC WAIST",
+      "subSubClass_name": "PRINT",
+      "dssProduct": {
+        "refNo": "ITM2010-910511",
+        "itemNo": "92S22BS200",
+        "version": 90,
+        "createdOn": "2020-10-09T14:09:40.243+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Adopted",
+        "itemDescription": "EW MID LENGTH BOARDIE",
+        "integrationStatus": "Pre-Registered",
+        "itemNotesAndInstructions": "PET Bottle Recycled Print Swim Short\n- 100% PET Bottle Recycled Polyester soft microfiber fabric\n- Timeless all over print\n- Relaxed fit\n- Elastic waist with off white drawcord\n- 2 functional side pockets and single back pocket with velcro fastening"
+      },
+      "isDcReplenished": false,
+      "aus_sell_price": "aus_sell_price",
+      "new_zealand_sell_price": "12",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Non-Replenished",
+      "tagged_data": {},
+      "created_on": "2020-10-09T03:09:40.243Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      }
+    },
+    {
+      "_id": "60fab77efe07fa0052303dd4",
+      "product_id": "31008e5442de4d45ab8fc954558287f8",
+      "source_id": "ITM2010-000511",
+      "product_source_id": "31008e5442de4d45ab8fc954558287f8ITM2010-000511",
+      "type": "AP",
+      "keycode_type": "Style",
+      "styleNumber": 154461,
+      "keycode": null,
+      "status_code": {
+        "australia": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "4"
+        ],
+        "newZealand": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "4",
+          "4"
+        ]
+      },
+      "primaryColour_name": "BLACK",
+      "secondaryColour_name": "BLACK PINE",
+      "colourDescription": "BLACK PINE",
+      "department_code": "092",
+      "family_name": "BOARDSHORTS",
+      "class_name": "BOARDSHORTS",
+      "subclass_name": "ELASTIC WAIST",
+      "subSubClass_name": "PRINT",
+      "dssProduct": {
+        "refNo": "ITM2010-000511",
+        "itemNo": "92S22BS200",
+        "version": 90,
+        "createdOn": "2020-10-09T14:09:40.243+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Adopted",
+        "itemDescription": "EW MID LENGTH BOARDIE",
+        "integrationStatus": "Pre-Registered",
+        "itemNotesAndInstructions": "PET Bottle Recycled Print Swim Short\n- 100% PET Bottle Recycled Polyester soft microfiber fabric\n- Timeless all over print\n- Relaxed fit\n- Elastic waist with off white drawcord\n- 2 functional side pockets and single back pocket with velcro fastening"
+      },
+      "isDcReplenished": false,
+      "aus_sell_price": "aus_sell_price",
+      "new_zealand_sell_price": "12",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Non-Replenished",
+      "tagged_data": {},
+      "created_on": "2020-10-09T03:09:40.243Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      }
+    },
+    {
+      "_id": "60fab77efe07fa0052303def",
+      "product_id": "e38eb45584b04d268bfb68d7f80a9045",
+      "source_id": "ITM2010-900511",
+      "product_source_id": "e38eb45584b04d268bfb68d7f80a9045ITM2010-900511",
+      "type": "AP",
+      "keycode_type": "Style",
+      "styleNumber": 154461,
+      "keycode": null,
+      "status_code": {
+        "australia": [
+          "8",
+          "8",
+          "8",
+          "8"
+        ],
+        "newZealand": [
+          "8",
+          "8",
+          "8",
+          "8"
+        ]
+      },
+      "primaryColour_name": "BLACK",
+      "secondaryColour_name": "BLK PALM",
+      "colourDescription": "BLK PALM",
+      "department_code": "092",
+      "family_name": "BOARDSHORTS",
+      "class_name": "BOARDSHORTS",
+      "subclass_name": "ELASTIC WAIST",
+      "subSubClass_name": "PRINT",
+      "dssProduct": {
+        "refNo": "ITM2010-900511",
+        "itemNo": "92S22BS200",
+        "version": 90,
+        "createdOn": "2020-10-09T14:09:40.243+11:00",
+        "documentStatus": "active",
+        "workFlowStatus": "Adopted",
+        "itemDescription": "EW MID LENGTH BOARDIE",
+        "integrationStatus": "Pre-Registered",
+        "itemNotesAndInstructions": "PET Bottle Recycled Print Swim Short\n- 100% PET Bottle Recycled Polyester soft microfiber fabric\n- Timeless all over print\n- Relaxed fit\n- Elastic waist with off white drawcord\n- 2 functional side pockets and single back pocket with velcro fastening"
+      },
+      "isDcReplenished": false,
+      "aus_sell_price": "aus_sell_price",
+      "new_zealand_sell_price": "12",
+      "fixtureType_name": "Regular",
+      "instorePresentation_name": "Hang",
+      "replenishmentMethod_name": "Non-Replenished",
+      "tagged_data": {},
+      "created_on": "2020-10-09T03:09:40.243Z",
+      "core_range_dates": {
+        "core_on_range": "",
+        "core_off_range": ""
+      }
+    }
+  ],
+  "page": 1,
+  "total": 100
+}

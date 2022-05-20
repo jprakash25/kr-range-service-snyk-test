@@ -1,0 +1,110 @@
+---
+# yamllint disable rule:line-length
+AWSTemplateFormatVersion: "2010-09-09"
+Description: This stack for the queue to subscribe from global product service
+Parameters:
+  ProjectName:
+    Type: String
+
+  Environment:
+    Type: String
+
+  KrisRangeDatesQueueArn:
+    Type: String
+    Default: "arn:aws:sqs:ap-southeast-2:360540380466:kris-nonprod-kmart-range-dates-queue"
+
+  QueueVisibilityTimeout:
+    Type: Number
+    Default: 600
+    Description: This needs to be larger than the Lambda timeout!
+
+Conditions:
+  CreateKrisNonProdSubscription: !Equals
+    - !Ref Environment
+    - nonprod
+
+Resources:
+  CoreDataRangeInputQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: !Sub ${ProjectName}-${Environment}-cds-range-input-queue
+      VisibilityTimeout: !Ref QueueVisibilityTimeout
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt CoreDataRangeInputDeadLetterQueue.Arn
+        maxReceiveCount: 5
+
+  CoreDataRangeInputDeadLetterQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: !Sub ${ProjectName}-${Environment}-cds-range-input-dlq
+
+  CoreDataRangeServiceInputTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: !Sub ${ProjectName}-${Environment}-cds-range-service-topic
+      TopicName: !Sub ${ProjectName}-${Environment}-cds-range-service-topic
+
+  CoreDataRangeInputQueueSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Endpoint: !GetAtt CoreDataRangeInputQueue.Arn
+      Protocol: sqs
+      TopicArn: !Ref CoreDataRangeServiceInputTopic
+
+  KrisRangeDatesQueueSubscription:
+    Type: AWS::SNS::Subscription
+    Condition: CreateKrisNonProdSubscription
+    Properties:
+      Endpoint: !Ref KrisRangeDatesQueueArn
+      Protocol: sqs
+      TopicArn: !Ref CoreDataRangeServiceInputTopic
+
+  CoreDataRangeInputQueuePolicy:
+    Type: AWS::SQS::QueuePolicy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Action: sqs:SendMessage
+            Principal: "*"
+            Resource: !GetAtt CoreDataRangeInputQueue.Arn
+            Condition:
+              ArnEquals:
+                aws:SourceArn: !Ref CoreDataRangeServiceInputTopic
+      Queues:
+        - !Ref CoreDataRangeInputQueue
+
+  NotificationsTopicFailedAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      EvaluationPeriods: 5
+      Statistic: Sum
+      Threshold: 1
+      TreatMissingData: ignore
+      AlarmDescription: Alarm if SNS Topic fails delivery
+      Period: 60
+      Namespace: AWS/SNS
+      Dimensions:
+        - Name: TopicName
+          Value: !GetAtt CoreDataRangeServiceInputTopic.TopicName
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      MetricName: NumberOfNotificationsFailed
+
+Outputs:
+  CoreDataRangeInputQueue:
+    Description: "Range service input queue for cds data"
+    Value: !GetAtt CoreDataRangeInputQueue.Arn
+    Export:
+      Name: !Sub ${AWS::StackName}::CoreDataRangeInputQueue
+
+  CoreDataRangeInputQueueUrl:
+    Description: "Range service input queue for cds data"
+    Value: !Ref CoreDataRangeInputQueue
+    Export:
+      Name: !Sub ${AWS::StackName}::CoreDataRangeInputQueueUrl
+
+  CoreDataRangeServiceInputTopic:
+    Description: "Range service SNS for getting cds data"
+    Value: !Ref CoreDataRangeServiceInputTopic
+    Export:
+      Name: !Sub ${AWS::StackName}::CoreDataRangeServiceInputTopic

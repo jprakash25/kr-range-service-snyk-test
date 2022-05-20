@@ -1,0 +1,27 @@
+[
+  {
+    "store_id": "khub_minus",
+    "type": "khub",
+    "display_name": "Minus"
+  },
+  {
+    "store_id": "khub",
+    "type": "khub",
+    "display_name": "Base"
+  },
+  {
+    "store_id": "khub_plus",
+    "type": "khub",
+    "display_name": "Plus"
+  },
+  {
+    "store_id": "khub_max",
+    "type": "khub",
+    "display_name": "Max"
+  },
+  {
+    "store_id": "khub_super_maxx",
+    "type": "khub",
+    "display_name": "Super Maxx"
+  }
+]

@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+
+set -e -x
+export NODE_ENV=test
+
+coverage=30 # Coverage percentage
+
+if [ "$1" = 'report' ]
+then
+  rm -rf ./coverage
+fi
+
+
+# Source in variables
+# shellcheck disable=SC1091
+if [ "$1" = "unit" ] || [ "$1" = 'all' ] || [ "$1" = 'report' ]
+then
+  ### Unit testing
+  export COVERAGE_DIR='coverage/coverage_unit'
+  ./node_modules/.bin/jest --config jest.unit.config.js --testRegex='test/unit/.*test.js$' --coverage --runInBand
+fi
+
+### Integration Testing
+### --- DISABLED INTEGRATION TESTING --- ###
+if [ "$1" = 'integration' ] || [ "$1" = 'all' ] || [ "$1" = 'report' ]
+then
+  export PGUSER=${PGUSER}
+  export PGPASSWORD=${PGPASSWORD}
+  export PGDATABASE=${PGDATABASE}
+  if [ "$build_env" = 'ci' ]
+  then
+    export PGHOST=range-db
+  else
+    export PGHOST=localhost
+  fi
+  docker-compose -f ./docker-compose.yml rm range-db || true
+  docker-compose -f ./docker-compose.yml up -d range-db || true
+  yarn db:migrate || true
+  export COVERAGE_DIR='coverage/coverage_integration'
+  ./node_modules/.bin/jest --config jest.config.js --testRegex='test/integration/.*test.js$' --setupTestFrameworkScriptFile='./test/integration/setup.js' --coverage --runInBand
+fi
+
+if [ "$1" = 'all' ] || [ "$1" = 'report' ]
+then
+  ### Moving both unit and integration test out put to coverage folder
+  mv coverage/coverage_unit/coverage-final.json coverage/unit-out.json
+  ### --- DISABLED INTEGRATION TESTING --- ###
+  mv coverage/coverage_integration/coverage-final.json coverage/integration-out.json
+
+  ### Combining unit and integration testing
+  ./node_modules/.bin/nyc merge coverage/ coverage/combined/out.json
+
+  ### Generating HTML and cobertura reports
+  ./node_modules/.bin/istanbul report \
+    --include coverage/combined/out.json \
+    --dir coverage/combined html cobertura
+
+  ### Checking combined coverage
+  ./node_modules/.bin/istanbul check-coverage \
+    --include coverage/combined/out.json \
+    --lines $coverage \
+    --branches $coverage \
+    --statements $coverage \
+    --functions $coverage
+fi
+
+if [ "$1" = 'report' ]
+then
+  ### Generating coverage badge
+  ./node_modules/.bin/istanbul-cobertura-badger -e 85 -g 80 -r coverage/combined/cobertura-coverage.xml -d ../docs/badges --badgeFileName range-service-coverage
+fi

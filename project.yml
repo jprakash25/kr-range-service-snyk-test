@@ -1,0 +1,7 @@
+---
+project_id: "rangingtool"
+tags:
+  Billing: "rangingtool"
+  Project: "rangingtool"
+  Owner: "rangingtool"
+  Environment: "{{ cfn_environment }}"

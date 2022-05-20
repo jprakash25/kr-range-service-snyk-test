@@ -1,0 +1,42 @@
+---
+# Common
+ProjectName: rangingtool
+Environment: dev
+GlobalAwsAccountId: "930827561717"
+GlobalAwsRegion: ap-southeast-2
+BillingTag: rangingtool
+ArtefactsAccountId: "847029211010"
+DevAccountId: "187628286232"
+NonProdAccoutId: "318263296841"
+ProdAccountId: "563000599290"
+S3BucketNamePrefix: "kmartau-rangingtool"
+
+# yamllint disable rule:line-length
+ProductServiceEventTopicName: rangesmart-dev-kg-product-service-ranging-product-event-notifications
+
+# Range Service
+EcsBaseStack: rangingtool-kmart-ecs-cluster
+EcsLoadBalancerStack: rangingtool-kmart-ecs-load-balancer
+RangeS3BucketsStack: rangingtool-kr-range-export-bucket-stack
+RangeSnsSqsStack: rangingtool-kr-range-service-sns-sqs
+ImageTag: "{{ cfn_image_tag }}"
+LambdaBuildTag: "{{ cfn_lambda_build_tag }}"
+
+EnablePoller: "true"
+
+CorsUrls: "https://app.ranging.int.ap-southeast-2.dev.a-sharedinfra.net,http://localhost:3000"
+
+# stack names
+RDSDatabaseStackName: rangingtool-kr-range-service-db
+DocumentDatabaseStackName: rangingtool-kr-range-service-document-db
+
+# AD
+TenantID: "cba8ca03-8b95-448d-b259-98a44d112f7c"
+ClientID: "4a7c3ad6-1759-45f5-93c5-ee9a5608a6df"
+IPMClientId: "f622f36e-73b0-4c17-8055-4032032dd13c"
+IpmUrl: "https://app.ipm.int.ap-southeast-2.dev.a-sharedinfra.net"
+IpmJobStatusPollInterval: 300000
+ProductServiceClientId: "95636213-f993-4fb8-a0de-431957d29c2e"
+ProductServiceUrl: "https://app.products.int.ap-southeast-2.dev.a-sharedinfra.net"
+IpmTriggerState: "DISABLED"
+KmartIpmTriggerState: "DISABLED"

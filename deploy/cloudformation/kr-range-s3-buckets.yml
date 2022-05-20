@@ -1,0 +1,155 @@
+---
+# yamllint disable rule:line-length
+AWSTemplateFormatVersion: "2010-09-09"
+Description: This is the s3 stack which create exports bucket.
+
+Parameters:
+  BillingTag:
+    Description: Used to tag resources because consolidated billing
+    Type: String
+
+  ProjectName:
+    Type: String
+    Description: The name of this project
+
+  Environment:
+    Description: The environment of the application
+    Type: String
+
+  S3BucketNamePrefix:
+    Description: S3 Bucket name prefix
+    Type: String
+
+  EnableVersioning:
+    Type: String
+    AllowedValues:
+      - "yes"
+      - "no"
+    Default: "no"
+
+  RangeSnsSqsStack:
+    Type: String
+    Description: Stack for all sqs sns of range service
+
+Conditions:
+  EnableBucketVersioning: !Equals
+    - !Ref EnableVersioning
+    - "yes"
+
+Resources:
+  RangeExportsBucketStack:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName:
+        !Join [
+          "-",
+          [!Ref S3BucketNamePrefix, !Ref Environment, "range-exports"],
+        ]
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      Tags:
+        - Key: Environment
+          Value: !Ref Environment
+        - Key: Billing
+          Value: !Ref BillingTag
+
+  RangeServiceInputBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName:
+        !Join [
+          "-",
+          [!Ref S3BucketNamePrefix, !Ref Environment, "range-service-inputs"],
+        ]
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      NotificationConfiguration:
+        TopicConfigurations:
+          - Event: "s3:ObjectCreated:*"
+            Topic:
+              Fn::ImportValue: !Sub ${RangeSnsSqsStack}::CoreDataRangeServiceInputTopic
+            Filter:
+              S3Key:
+                Rules:
+                  - Name: prefix
+                    Value: core-data-service/dss/
+      VersioningConfiguration: !If
+        - EnableBucketVersioning
+        - Status: Enabled
+        - !Ref AWS::NoValue
+      Tags:
+        - Key: Environment
+          Value: !Ref Environment
+        - Key: Billing
+          Value: !Ref BillingTag
+
+  CdsRangeNotificationPolicy:
+    Type: AWS::SNS::TopicPolicy
+    Properties:
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: s3.amazonaws.com
+            Action: sns:Publish
+            Resource:
+              Fn::ImportValue: !Sub ${RangeSnsSqsStack}::CoreDataRangeServiceInputTopic
+            Condition:
+              ArnEquals:
+                aws:SourceArn: !GetAtt RangeServiceInputBucket.Arn
+      Topics:
+        - Fn::ImportValue: !Sub ${RangeSnsSqsStack}::CoreDataRangeServiceInputTopic
+
+  RangeInfoBucketStack:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName:
+        !Join [
+          "-",
+          [!Ref S3BucketNamePrefix, !Ref Environment, "range-info"],
+        ]
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      Tags:
+        - Key: Environment
+          Value: !Ref Environment
+        - Key: Billing
+          Value: !Ref BillingTag
+
+Outputs:
+  RangeExportsBucketName:
+    Value: !Ref RangeExportsBucketStack
+    Export:
+      Name: !Sub ${AWS::StackName}::RangeExportsBucketName
+
+  RangeServiceInputsBucketName:
+    Value: !Ref RangeServiceInputBucket
+    Export:
+      Name: !Sub ${AWS::StackName}::RangeServiceInputBucket
+
+  RangeInfoBucketName:
+    Value: !Ref RangeInfoBucketStack
+    Export:
+      Name: !Sub ${AWS::StackName}::RangeInfoBucket

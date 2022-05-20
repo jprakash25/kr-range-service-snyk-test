@@ -1,0 +1,747 @@
+{
+  "products": [
+    {
+      "option": {
+        "id": "d659aef017f14f4ca6d91f934922eeb8",
+        "sizes": [
+          {
+            "apn": 9341105575484,
+            "size": {
+              "code": "0",
+              "name": "NO SIZE",
+              "sortSequence": 10
+            },
+            "sellPrices": {
+              "australia": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 2.7273,
+                  "priceIncGst": 3,
+                  "effectiveDate": "2017-12-30"
+                }
+              ],
+              "newZealand": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 3.4783,
+                  "priceIncGst": 4,
+                  "effectiveDate": "2017-12-30"
+                }
+              ]
+            },
+            "keycodeNumber": 42627685,
+            "productStatus": {
+              "australia": {
+                "code": "4",
+                "name": "Allocated"
+              },
+              "newZealand": {
+                "code": "4",
+                "name": "Allocated"
+              }
+            }
+          }
+        ],
+        "sequence": 1,
+        "primaryColour": {
+          "code": "350.0",
+          "name": "BLUE"
+        },
+        "secondaryColour": {
+          "code": null,
+          "name": "ALLURE"
+        },
+        "colourDescription": "ALLURE"
+      },
+      "ipm_on_range": "22/06/2020",
+      "ipm_off_range": "21/06/2021"
+    },
+    {
+      "option": {
+        "id": "799644ec482c4bceabaf1741708e8b15",
+        "sizes": [
+          {
+            "apn": 9341105575491,
+            "size": {
+              "code": "0",
+              "name": "NO SIZE",
+              "sortSequence": 10
+            },
+            "sellPrices": {
+              "australia": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 2.7273,
+                  "priceIncGst": 3,
+                  "effectiveDate": "2017-12-30"
+                }
+              ],
+              "newZealand": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 3.4783,
+                  "priceIncGst": 4,
+                  "effectiveDate": "2017-12-30"
+                }
+              ]
+            },
+            "keycodeNumber": 42627692,
+            "productStatus": {
+              "australia": {
+                "code": "4",
+                "name": "Allocated"
+              },
+              "newZealand": {
+                "code": "4",
+                "name": "Allocated"
+              }
+            }
+          }
+        ],
+        "sequence": 2,
+        "primaryColour": {
+          "code": "700.0",
+          "name": "BEIGE"
+        },
+        "secondaryColour": {
+          "code": null,
+          "name": "BELLA RSE"
+        },
+        "colourDescription": "BELLA RSE"
+      },
+      "ipm_on_range": "",
+      "ipm_off_range": ""
+    },
+    {
+      "option": {
+        "id": "19bf9604c31a4143a0b62842e9fc8188",
+        "sizes": [
+          {
+            "apn": 9341105575507,
+            "size": {
+              "code": "0",
+              "name": "NO SIZE",
+              "sortSequence": 10
+            },
+            "sellPrices": {
+              "australia": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 2.7273,
+                  "priceIncGst": 3,
+                  "effectiveDate": "2017-12-30"
+                }
+              ],
+              "newZealand": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 3.4783,
+                  "priceIncGst": 4,
+                  "effectiveDate": "2017-12-30"
+                }
+              ]
+            },
+            "keycodeNumber": 42627708,
+            "productStatus": {
+              "australia": {
+                "code": "4",
+                "name": "Allocated"
+              },
+              "newZealand": {
+                "code": "4",
+                "name": "Allocated"
+              }
+            }
+          }
+        ],
+        "sequence": 3,
+        "primaryColour": {
+          "code": "450.0",
+          "name": "GREEN"
+        },
+        "secondaryColour": {
+          "code": null,
+          "name": "DK FIELDS"
+        },
+        "colourDescription": "DK FIELDS"
+      },
+      "ipm_on_range": "",
+      "ipm_off_range": ""
+    },
+    {
+      "option": {
+        "id": "f46fcb2676284ad98a7dcb9ea276d4eb",
+        "sizes": [
+          {
+            "apn": 9341105575514,
+            "size": {
+              "code": "0",
+              "name": "NO SIZE",
+              "sortSequence": 10
+            },
+            "sellPrices": {
+              "australia": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 2.7273,
+                  "priceIncGst": 3,
+                  "effectiveDate": "2017-12-30"
+                }
+              ],
+              "newZealand": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 3.4783,
+                  "priceIncGst": 4,
+                  "effectiveDate": "2017-12-30"
+                }
+              ]
+            },
+            "keycodeNumber": 42627715,
+            "productStatus": {
+              "australia": {
+                "code": "4",
+                "name": "Allocated"
+              },
+              "newZealand": {
+                "code": "4",
+                "name": "Allocated"
+              }
+            }
+          }
+        ],
+        "sequence": 4,
+        "primaryColour": {
+          "code": "650.0",
+          "name": "PURPLE"
+        },
+        "secondaryColour": {
+          "code": null,
+          "name": "VLET DREAM"
+        },
+        "colourDescription": "VLET DREAM"
+      },
+      "ipm_on_range": "",
+      "ipm_off_range": ""
+    }
+  ],
+  "event": {
+    "year": 2018,
+    "brand": {
+      "brandType": {
+        "code": "PRV",
+        "name": "Private"
+      },
+      "brandLabel": {
+        "code": "GENERIC_157",
+        "name": "GENERIC"
+      }
+    },
+    "isSet": false,
+    "hanger": {
+      "code": null,
+      "name": null
+    },
+    "images": [
+      {
+        "id": "0d7c3ffa470d437c89e58055ad24a417",
+        "types": [],
+        "isDefault": true,
+        "description": null
+      }
+    ],
+    "season": {
+      "code": "N",
+      "name": "Non-Seasonal"
+    },
+    "tagType": {
+      "code": null,
+      "name": null
+    },
+    "sizeType": {
+      "code": "0",
+      "name": "M1 - No Size",
+      "category": 9,
+      "description": null
+    },
+    "gradeCode": "C",
+    "materials": [],
+    "orderLine": {
+      "code": "W",
+      "name": "Warehouse"
+    },
+    "ageGrading": null,
+    "basicStock": {
+      "code": "0",
+      "name": "0"
+    },
+    "dssProduct": {
+      "refNo": "ITM1712-000108",
+      "itemNo": "B19H1-OF05",
+      "version": 22,
+      "documentStatus": "active",
+      "workFlowStatus": "Final",
+      "itemDescription": "F19HI Core 14ml Purse spray SRP  Sweet Allure / Violet Dream / Dark Fields / Bella Rose",
+      "integrationStatus": "Registered",
+      "itemNotesAndInstructions": "Basic Product Info: 14ML ROLLER BALL\nSWEET ALLURE, . 4x6 IN TYPE B SRP."
+    },
+    "familyTree": {
+      "class": {
+        "code": "001",
+        "name": "GIFTS"
+      },
+      "family": {
+        "code": "016",
+        "name": "GIFTS"
+      },
+      "subClass": {
+        "code": "003",
+        "name": "FRAGRANCE"
+      },
+      "department": {
+        "code": "087",
+        "name": "COSMETICS"
+      },
+      "subSubClass": {
+        "code": "001",
+        "name": "SINGLES"
+      }
+    },
+    "onShowDate": "2017-12-27",
+    "fixtureType": {
+      "code": "R",
+      "name": "Regular"
+    },
+    "isAllocated": false,
+    "isPrePriced": false,
+    "keycodeType": "Single",
+    "offShowDate": "9999-01-01",
+    "priceMethod": {
+      "code": "ST",
+      "name": "Standard pricing"
+    },
+    "sellingUnit": {
+      "code": "EA",
+      "name": "EACH"
+    },
+    "styleNumber": 136819,
+    "isForReOrder": true,
+    "priceTiering": {
+      "code": "M",
+      "name": "M-OPP"
+    },
+    "requirements": [
+      {
+        "category": "Additional",
+        "sequence": 4,
+        "detailCode": {
+          "code": "ADD-OP01-01",
+          "name": "Yes"
+        },
+        "description": "Online Product (Y/N)",
+        "detailString": null,
+        "instructions": null
+      },
+      {
+        "category": "Additional",
+        "sequence": 5,
+        "detailCode": null,
+        "description": "Online Photo - Packaging/Supplier Photo(s) Available (Y/N)",
+        "detailString": null,
+        "instructions": null
+      },
+      {
+        "category": "Hardgood Composition",
+        "sequence": 6,
+        "detailCode": null,
+        "description": "Ceramic",
+        "detailString": null,
+        "instructions": null
+      },
+      {
+        "category": "Hardgood Composition",
+        "sequence": 7,
+        "detailCode": null,
+        "description": "Glassware",
+        "detailString": null,
+        "instructions": null
+      },
+      {
+        "category": "Hardgood Composition",
+        "sequence": 8,
+        "detailCode": null,
+        "description": "Metal",
+        "detailString": null,
+        "instructions": null
+      },
+      {
+        "category": "Hardgood Composition",
+        "sequence": 9,
+        "detailCode": null,
+        "description": "Other",
+        "detailString": null,
+        "instructions": null
+      },
+      {
+        "category": "Hardgood Composition",
+        "sequence": 10,
+        "detailCode": null,
+        "description": "Plant Material",
+        "detailString": null,
+        "instructions": null
+      },
+      {
+        "category": "Hardgood Composition",
+        "sequence": 11,
+        "detailCode": null,
+        "description": "Plastic",
+        "detailString": null,
+        "instructions": null
+      },
+      {
+        "category": "Hardgood Composition",
+        "sequence": 12,
+        "detailCode": null,
+        "description": "Wooden - Solid",
+        "detailString": null,
+        "instructions": null
+      },
+      {
+        "category": "Labelling",
+        "sequence": 13,
+        "detailCode": null,
+        "description": "Label/Tag Codes",
+        "detailString": null,
+        "instructions": null
+      }
+    ],
+    "isPriceTagged": false,
+    "shelfLifeDays": null,
+    "isCarryThrough": false,
+    "isDcConveyable": true,
+    "pluDescription": "14ML PURSE SPRAY",
+    "countryOfOrigin": {
+      "code": "CN",
+      "name": "CN-China"
+    },
+    "isDcReplenished": true,
+    "isKeyVolumeLine": false,
+    "sourcingRecords": [
+      {
+        "quotes": [
+          {
+            "vendor": {
+              "code": "V002476",
+              "name": "Double Body Biotech Limited",
+              "status": "Active",
+              "locality": "Overseas",
+              "packType": {
+                "code": "F",
+                "name": "Flat"
+              },
+              "incoterms": "FOB",
+              "vendorAgentType": [
+                {
+                  "code": "KAS",
+                  "name": "KAS – Vendor"
+                }
+              ],
+              "methodOfTransport": {
+                "code": "SEA",
+                "name": "Sea"
+              }
+            },
+            "cartons": [
+              {
+                "type": "Instore",
+                "depth": 14.7,
+                "width": 20.5,
+                "height": 19,
+                "weight": 0.87
+              },
+              {
+                "type": "Outer",
+                "depth": 16.7,
+                "width": 22.5,
+                "height": 21,
+                "weight": 1
+              },
+              {
+                "type": "Outer",
+                "depth": 16.7,
+                "width": 22.5,
+                "height": 21,
+                "weight": 1
+              }
+            ],
+            "endDate": "2018-10-19",
+            "factory": {
+              "code": "F002997",
+              "name": "Double Body Biotech Limited",
+              "portOfLoading": {
+                "code": "CNYTN",
+                "name": "Yantian"
+              },
+              "countryOfOrigin": {
+                "code": "CN",
+                "name": "China"
+              }
+            },
+            "dssQuote": {
+              "refNo": "QTE1810-000283",
+              "version": 2,
+              "workFlowStatus": "Buyer Accept"
+            },
+            "homeCost": {
+              "cost": 0.91,
+              "currency": "USD"
+            },
+            "isHazardous": false,
+            "effectiveDate": "2018-10-04",
+            "unitsPerInner": 6,
+            "innersPerOuter": 1,
+            "isEffectiveNow": false,
+            "destinationCost": {
+              "australia": {
+                "currency": "AUD",
+                "elcExGst": 1.2565,
+                "elcIncGst": 1.3822,
+                "gstPercentage": 9
+              },
+              "newZealand": {
+                "currency": "NZD",
+                "elcExGst": 1.362,
+                "elcIncGst": 1.5663,
+                "gstPercentage": 13
+              }
+            },
+            "containerQuantity": 0,
+            "quoteEffectiveDate": "2018-10-04",
+            "productLeadTimeDays": 90,
+            "totalCartonQuantity": 6,
+            "minimumOrderQuantity": 500,
+            "isTransTasmanShipment": false,
+            "isFullContainerShipment": false,
+            "minimumOrderQuantityType": {
+              "code": "U",
+              "name": "Units"
+            }
+          }
+        ],
+        "vendor": {
+          "code": "V002476",
+          "name": "Double Body Biotech Limited",
+          "status": "Active",
+          "locality": "Overseas",
+          "packType": {
+            "code": "F",
+            "name": "Flat"
+          },
+          "incoterms": "FOB",
+          "vendorAgentType": [
+            {
+              "code": "KAS",
+              "name": "KAS – Vendor"
+            }
+          ],
+          "methodOfTransport": {
+            "code": "SEA",
+            "name": "Sea"
+          }
+        },
+        "factories": [
+          {
+            "code": "F002997",
+            "name": "Double Body Biotech Limited",
+            "portOfLoading": {
+              "code": "CNYTN",
+              "name": "Yantian"
+            },
+            "countryOfOrigin": {
+              "code": "CN",
+              "name": "China"
+            }
+          }
+        ],
+        "sourcingAgent": {
+          "code": "KAS_HK",
+          "name": "KAS - Hong Kong"
+        },
+        "kmartSuppliers": {
+          "australia": {
+            "agentName": "KAS PTY LIMITED (HKG)              ",
+            "isKasAgent": true,
+            "agentNumber": 584227,
+            "supplierNumber": 581271
+          },
+          "newZealand": {
+            "agentName": "KAS PTY LIMITED (HKG)              ",
+            "isKasAgent": true,
+            "agentNumber": 584227,
+            "supplierNumber": 581271
+          }
+        },
+        "targetUnitCost": {
+          "cost": null,
+          "currency": "USD"
+        },
+        "dssSourcingRecord": {
+          "refNo": "SOR1712-000069",
+          "version": 5,
+          "workFlowStatus": "Buyer Accept"
+        },
+        "estimatedElcExGst": {
+          "cost": null,
+          "currency": "AUD"
+        },
+        "isDefaultSourcingRecord": true
+      }
+    ],
+    "brandDescription": "OXX 14ML PURSE SPRAY",
+    "careInstructions": [],
+    "isSecurityTagged": false,
+    "minShelfLifeDays": null,
+    "piecesPerGarment": null,
+    "distributionMethod": {
+      "code": "REG",
+      "name": "Regional"
+    },
+    "flexibleAttributes": [],
+    "warningsAndHazards": {
+      "flammability": {
+        "code": "0",
+        "name": "Not Applicable"
+      },
+      "poisonsSchedule": null,
+      "dangerousGoodsPack": null,
+      "hazardousChemicals": null,
+      "dangerousGoodsClass": {
+        "code": "3.0",
+        "name": "Flammable Liquids"
+      },
+      "dangerousGoodsNumber": {
+        "code": "1263",
+        "name": "PAINTS OR PAINT RELATED METERIAL"
+      }
+    },
+    "instorePresentation": {
+      "code": "S",
+      "name": "Shelf"
+    },
+    "replenishmentMethod": {
+      "code": "R",
+      "name": "Replenished"
+    },
+    "estimatedWeeklySales": null,
+    "isOrderedAsAssortment": false,
+    "similarStyleOrKeycode": null,
+    "abbreviatedDescription": "OXX 14ML PURSE SPRAY",
+    "currentSourcingSummary": {
+      "vendor": {
+        "code": "V002476",
+        "name": "Double Body Biotech Limited",
+        "status": "Active",
+        "locality": "Overseas",
+        "packType": {
+          "code": "F",
+          "name": "Flat"
+        },
+        "incoterms": "FOB",
+        "vendorAgentType": [
+          {
+            "code": "KAS",
+            "name": "KAS – Vendor"
+          }
+        ],
+        "methodOfTransport": {
+          "code": "SEA",
+          "name": "Sea"
+        }
+      },
+      "homeCost": {
+        "cost": 0.91,
+        "currency": "USD"
+      },
+      "packType": {
+        "code": "F",
+        "name": "Flat"
+      },
+      "factories": [
+        {
+          "code": "F002997",
+          "name": "Double Body Biotech Limited",
+          "portOfLoading": {
+            "code": "CNYTN",
+            "name": "Yantian"
+          },
+          "countryOfOrigin": {
+            "code": "CN",
+            "name": "China"
+          }
+        }
+      ],
+      "unitsPerInner": 6,
+      "innersPerOuter": 1,
+      "kmartSuppliers": {
+        "australia": {
+          "agentName": "KAS PTY LIMITED (HKG)              ",
+          "isKasAgent": true,
+          "agentNumber": 584227,
+          "supplierNumber": 581271
+        },
+        "newZealand": {
+          "agentName": "KAS PTY LIMITED (HKG)              ",
+          "isKasAgent": true,
+          "agentNumber": 584227,
+          "supplierNumber": 581271
+        }
+      },
+      "containerQuantity": 0,
+      "dssSourcingRecord": {
+        "refNo": "SOR1712-000069",
+        "version": 5,
+        "workFlowStatus": "Buyer Accept"
+      },
+      "isShelfReadyShipper": null,
+      "productLeadTimeDays": 90,
+      "totalCartonQuantity": 6,
+      "minimumOrderQuantity": 500,
+      "destinationCostAndSell": {
+        "australia": {
+          "currency": "AUD",
+          "elcExGst": 1.2582,
+          "elcIncGst": 1.384,
+          "gstPercentage": 9,
+          "sellPriceExGst": 2.7273,
+          "sellPriceIncGst": 3,
+          "marginPercentage": 0.5386666666666666
+        },
+        "newZealand": {
+          "currency": "NZD",
+          "elcExGst": 1.3704,
+          "elcIncGst": 1.576,
+          "gstPercentage": 13,
+          "sellPriceExGst": 3.4783,
+          "sellPriceIncGst": 4,
+          "marginPercentage": 0.606
+        }
+      },
+      "isFullContainerShipment": false,
+      "minimumOrderQuantityType": {
+        "code": "U",
+        "name": "Units"
+      }
+    },
+    "styleOrKeycodeToReplace": null,
+    "type": "GM"
+  },
+  "metadata": {
+    "source": "dss-plus",
+    "eventId": "2018-11-02T17:35:52.628Z-ITM1712-000108",
+    "eventType": "dss-product-changed",
+    "timestamp": "2018-11-03T17:35:52.628Z",
+    "causationId": "2018-11-02T17:35:52.628Z-ITM1712-000108",
+    "correlationId": "bf26ba30-dec5-11e8-ac73-f965878b8903"
+  },
+  "source": "core-data-service"
+}

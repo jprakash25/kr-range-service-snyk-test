@@ -1,0 +1,680 @@
+{
+  "products": [
+    {
+      "option": {
+        "id": "a3e6e5fb36f020b0e043c0a8346e20b0",
+        "sizes": [
+          {
+            "apn": 9300806778600,
+            "size": {
+              "code": "861",
+              "name": "SIZE 6",
+              "label": "6",
+              "sortSequence": 20
+            },
+            "sellPrices": {
+              "australia": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 4.5455,
+                  "priceIncGst": 5,
+                  "effectiveDate": "2013-08-13"
+                }
+              ],
+              "newZealand": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 13.0435,
+                  "priceIncGst": 15,
+                  "effectiveDate": "2012-12-26"
+                }
+              ]
+            },
+            "keycodeNumber": 64017297,
+            "productStatus": {
+              "australia": {
+                "code": "8",
+                "name": "Clearance"
+              },
+              "newZealand": {
+                "code": "8",
+                "name": "Clearance"
+              }
+            }
+          },
+          {
+            "apn": 9300806778617,
+            "size": {
+              "code": "957",
+              "name": "SIZE 7",
+              "label": "7",
+              "sortSequence": 30
+            },
+            "sellPrices": {
+              "australia": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 1.8182,
+                  "priceIncGst": 2,
+                  "effectiveDate": "2014-08-12"
+                }
+              ],
+              "newZealand": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 1.7391,
+                  "priceIncGst": 2,
+                  "effectiveDate": "2013-08-27"
+                }
+              ]
+            },
+            "keycodeNumber": 64017303,
+            "productStatus": {
+              "australia": {
+                "code": "8",
+                "name": "Clearance"
+              },
+              "newZealand": {
+                "code": "8",
+                "name": "Clearance"
+              }
+            }
+          },
+          {
+            "apn": 9300806778624,
+            "size": {
+              "code": "22",
+              "name": "SIZE 8",
+              "label": "8",
+              "sortSequence": 40
+            },
+            "sellPrices": {
+              "australia": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 4.5455,
+                  "priceIncGst": 5,
+                  "effectiveDate": "2013-08-13"
+                }
+              ],
+              "newZealand": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 13.0435,
+                  "priceIncGst": 15,
+                  "effectiveDate": "2012-12-26"
+                }
+              ]
+            },
+            "keycodeNumber": 64017310,
+            "productStatus": {
+              "australia": {
+                "code": "8",
+                "name": "Clearance"
+              },
+              "newZealand": {
+                "code": "8",
+                "name": "Clearance"
+              }
+            }
+          },
+          {
+            "apn": 9300806778631,
+            "size": {
+              "code": "237",
+              "name": "SIZE 9",
+              "label": "9",
+              "sortSequence": 50
+            },
+            "sellPrices": {
+              "australia": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 4.5455,
+                  "priceIncGst": 5,
+                  "effectiveDate": "2013-08-13"
+                }
+              ],
+              "newZealand": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 13.0435,
+                  "priceIncGst": 15,
+                  "effectiveDate": "2012-12-26"
+                }
+              ]
+            },
+            "keycodeNumber": 64017327,
+            "productStatus": {
+              "australia": {
+                "code": "8",
+                "name": "Clearance"
+              },
+              "newZealand": {
+                "code": "8",
+                "name": "Clearance"
+              }
+            }
+          },
+          {
+            "apn": 9300806778648,
+            "size": {
+              "code": "23",
+              "name": "SIZE 10",
+              "label": "10",
+              "sortSequence": 60
+            },
+            "sellPrices": {
+              "australia": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 4.5455,
+                  "priceIncGst": 5,
+                  "effectiveDate": "2013-08-13"
+                }
+              ],
+              "newZealand": [
+                {
+                  "endDate": "9999-12-31",
+                  "priceExGst": 13.0435,
+                  "priceIncGst": 15,
+                  "effectiveDate": "2012-12-26"
+                }
+              ]
+            },
+            "keycodeNumber": 64017334,
+            "productStatus": {
+              "australia": {
+                "code": "8",
+                "name": "Clearance"
+              },
+              "newZealand": {
+                "code": "8",
+                "name": "Clearance"
+              }
+            }
+          }
+        ],
+        "sequence": 1,
+        "primaryColour": {
+          "code": "150",
+          "name": "WHITE"
+        },
+        "secondaryColour": {
+          "code": null,
+          "name": "WHITE"
+        },
+        "colourDescription": "WHITE"
+      },
+      "bp_on_range": "",
+      "bp_off_range": ""
+    }
+  ],
+  "event": {
+    "rbu": {
+      "id": "196",
+      "range": "AP",
+      "rbuName": "KIDS-CLOTHING",
+      "rangeName": "APPAREL",
+      "rbuNumber": "150",
+      "divisonName": "KIDS OUTERWEAR",
+      "divisonNumber": "150",
+      "departmentName": "GIRLSWEAR 1-8",
+      "departmentNumber": "006"
+    },
+    "year": 2012,
+    "brand": {
+      "brandType": {
+        "code": "PRV",
+        "name": "Private"
+      },
+      "brandLabel": {
+        "code": "SPORTS LTD_9969",
+        "name": "SPORTS LTD"
+      }
+    },
+    "isSet": false,
+    "hanger": {
+      "code": "FIS_FW75BL_AC21",
+      "name": "FIS_FW75BL_AC21-FIS - 120MM U END FWR HANGER & SIZE TAB"
+    },
+    "images": [
+      {
+        "id": "425ed3b568e39bb896f2a2e7b0ef3402",
+        "types": [],
+        "isDefault": true,
+        "description": null
+      },
+      {
+        "id": "8f5deb0b21df05e5f5e7bcf98915af22",
+        "types": [
+          {
+            "code": "QAR",
+            "name": "QAR-QA-QA Related"
+          }
+        ],
+        "isDefault": false,
+        "description": "qc"
+      },
+      {
+        "id": "d838d80b1d3f0188a5d542a9e1e26c5e",
+        "types": [
+          {
+            "code": "QAR",
+            "name": "QAR-QA-QA Related"
+          }
+        ],
+        "isDefault": false,
+        "description": "qc"
+      },
+      {
+        "id": "e0dcdcd66a62997309de783c3d92c93b",
+        "types": [
+          {
+            "code": "QAR",
+            "name": "QAR-QA-QA Related"
+          }
+        ],
+        "isDefault": false,
+        "description": "qc"
+      },
+      {
+        "id": "be23f31b5e22689971ce4157fb50021b",
+        "types": [
+          {
+            "code": "QAR",
+            "name": "QAR-QA-QA Related"
+          }
+        ],
+        "isDefault": false,
+        "description": "approved ship mark"
+      }
+    ],
+    "season": {
+      "code": "N",
+      "name": "Non-Seasonal"
+    },
+    "tagType": {
+      "code": "01",
+      "name": "Normal Tag"
+    },
+    "sizeType": {
+      "code": "73",
+      "name": "F3 - ADULT SHOE SIZES",
+      "category": 9,
+      "description": null
+    },
+    "gradeCode": "C",
+    "materials": [],
+    "orderLine": {
+      "code": "W",
+      "name": "Warehouse"
+    },
+    "ageGrading": null,
+    "basicStock": {
+      "code": "0",
+      "name": "0"
+    },
+    "dssProduct": {
+      "refNo": "D001Y11M05-000794",
+      "itemNo": "DANIKA II WW SPORTING WALKER",
+      "version": 2,
+      "documentStatus": "active",
+      "workFlowStatus": "Final",
+      "itemDescription": "Commerce Markings - \nUpper: Synthetic\nLining: Synthetic\nSole: Synthetic\nCountry of Origin: China\nKeycode & Size\nCUSTOM CODE: W SU SS",
+      "integrationStatus": "Registered",
+      "itemNotesAndInstructions": "Basic Product Info: UPPER: pu as per sample\nLINING: mesh\nSOCK: mesh\nSOCK LABEL: SPORTS LTD\nOUTSOLE: trp/ phylon\nJOINING: to be joined via 16\" elastic joiner on inner strap of each shoe\nTAGGING: kimball tag to be joined via 5\" nylon clip joiner on outer strap of each shoe\nPACKAGING: FW 75  polybag, eggcrate, \nItem/Style Comments:"
+    },
+    "familyTree": {
+      "class": {
+        "code": "001",
+        "name": "WOMENS"
+      },
+      "family": {
+        "code": "001",
+        "name": "ACTIVE FOOTWEAR"
+      },
+      "subClass": {
+        "code": "001",
+        "name": "WOMENS"
+      },
+      "department": {
+        "code": "055",
+        "name": "ACTIVE FOOTWEAR"
+      },
+      "subSubClass": {
+        "code": "001",
+        "name": "WOMENS"
+      }
+    },
+    "onShowDate": "2011-05-30",
+    "fixtureType": {
+      "code": null,
+      "name": null
+    },
+    "isAllocated": true,
+    "isPrePriced": true,
+    "keycodeType": "Style",
+    "offShowDate": "9999-12-31",
+    "priceMethod": {
+      "code": "CL",
+      "name": "Climatic"
+    },
+    "sellingUnit": {
+      "code": "PR",
+      "name": "PAIR"
+    },
+    "styleNumber": 104245,
+    "isForReOrder": false,
+    "isShelfReady": false,
+    "priceTiering": {
+      "code": "P",
+      "name": "P-2UP"
+    },
+    "requirements": [
+      {
+        "category": "Footwear Spec",
+        "sequence": 1,
+        "detailCode": null,
+        "description": "Commerce Marking",
+        "detailString": "Upper:pu,Sole:tpr/ phylon,Lining:mesh,Country of Origin:china,Size:6-10,Keycode:,Barcode:,Other:",
+        "instructions": null
+      },
+      {
+        "category": "Labelling",
+        "sequence": 2,
+        "detailCode": null,
+        "description": "Label/Tag Codes",
+        "detailString": "Main Label Code:, Care Label Code:, Swing/Benefit Tag Code:, Other Codes:",
+        "instructions": null
+      },
+      {
+        "category": "Packaging",
+        "sequence": 3,
+        "detailCode": null,
+        "description": "Method",
+        "detailString": "Note:fw 75 hanger, single polybag, eggcrate",
+        "instructions": null
+      }
+    ],
+    "isPriceTagged": true,
+    "shelfLifeDays": 0,
+    "isCarryThrough": false,
+    "isDcConveyable": true,
+    "pluDescription": "WOMEN'S SPORTING",
+    "countryOfOrigin": {
+      "code": "CN",
+      "name": "CN-China"
+    },
+    "isDcReplenished": false,
+    "isKeyVolumeLine": false,
+    "sourcingRecords": [
+      {
+        "quotes": [
+          {
+            "vendor": {
+              "code": "V000182",
+              "name": "BETAFAC INDUSTRIES LTD",
+              "status": "Inactive",
+              "locality": "Overseas",
+              "packType": {
+                "code": "F",
+                "name": "Flat"
+              },
+              "incoterms": "INACT",
+              "vendorAgentType": [
+                {
+                  "code": "KAS",
+                  "name": "KAS – Vendor"
+                }
+              ],
+              "methodOfTransport": {
+                "code": "SEA",
+                "name": "Sea"
+              }
+            },
+            "cartons": [
+              {
+                "type": "Outer",
+                "depth": 33,
+                "width": 47,
+                "height": 63,
+                "weight": 7.68
+              },
+              {
+                "type": "Outer",
+                "depth": 0.1,
+                "width": 0.1,
+                "height": 0.1,
+                "weight": 0.1
+              }
+            ],
+            "endDate": "9999-12-31",
+            "factory": null,
+            "dssQuote": {
+              "refNo": "D001Y11M05-00079420120803",
+              "version": 1,
+              "workFlowStatus": "Buyer Accept"
+            },
+            "homeCost": {
+              "cost": 7.1,
+              "currency": "USD"
+            },
+            "isHazardous": false,
+            "effectiveDate": "2012-08-03",
+            "unitsPerInner": 12,
+            "innersPerOuter": 1,
+            "isEffectiveNow": true,
+            "destinationCost": {
+              "australia": {
+                "currency": "AUD",
+                "elcExGst": 7.8263,
+                "elcIncGst": 8.6089,
+                "gstPercentage": 9
+              },
+              "newZealand": {
+                "currency": "NZD",
+                "elcExGst": 10.4717,
+                "elcIncGst": 12.0425,
+                "gstPercentage": 13
+              }
+            },
+            "containerQuantity": null,
+            "quoteEffectiveDate": "2012-08-03",
+            "productLeadTimeDays": 0,
+            "totalCartonQuantity": 12,
+            "minimumOrderQuantity": 0,
+            "isTransTasmanShipment": false,
+            "isFullContainerShipment": false,
+            "minimumOrderQuantityType": {
+              "code": "U",
+              "name": "Units"
+            }
+          }
+        ],
+        "vendor": {
+          "code": "V000182",
+          "name": "BETAFAC INDUSTRIES LTD",
+          "status": "Inactive",
+          "locality": "Overseas",
+          "packType": {
+            "code": "F",
+            "name": "Flat"
+          },
+          "incoterms": "INACT",
+          "vendorAgentType": [
+            {
+              "code": "KAS",
+              "name": "KAS – Vendor"
+            }
+          ],
+          "methodOfTransport": {
+            "code": "SEA",
+            "name": "Sea"
+          }
+        },
+        "factories": [],
+        "sourcingAgent": {
+          "code": "KAS_HK",
+          "name": "KAS - Hong Kong"
+        },
+        "kmartSuppliers": {
+          "australia": {
+            "agentName": "KAS PTY LIMITED (HKG)              ",
+            "isKasAgent": true,
+            "agentNumber": 584227,
+            "supplierNumber": 516891
+          },
+          "newZealand": {
+            "agentName": "KAS PTY LIMITED (HKG)              ",
+            "isKasAgent": true,
+            "agentNumber": 584227,
+            "supplierNumber": 516891
+          }
+        },
+        "targetUnitCost": {
+          "cost": null,
+          "currency": "USD"
+        },
+        "dssSourcingRecord": {
+          "refNo": "D001Y11M05-000794SR",
+          "version": 1,
+          "workFlowStatus": "Production"
+        },
+        "estimatedElcExGst": {
+          "cost": null,
+          "currency": "AUD"
+        },
+        "isDefaultSourcingRecord": true
+      }
+    ],
+    "brandDescription": "SPORTS LTD",
+    "careInstructions": [],
+    "isSecurityTagged": false,
+    "minShelfLifeDays": 0,
+    "piecesPerGarment": 1,
+    "distributionMethod": {
+      "code": "REG",
+      "name": "Regional"
+    },
+    "flexibleAttributes": [],
+    "warningsAndHazards": {
+      "flammability": {
+        "code": "0",
+        "name": "Not Applicable"
+      },
+      "poisonsSchedule": null,
+      "dangerousGoodsPack": null,
+      "hazardousChemicals": null,
+      "dangerousGoodsClass": null,
+      "dangerousGoodsNumber": null
+    },
+    "instorePresentation": {
+      "code": "H",
+      "name": "Hang"
+    },
+    "replenishmentMethod": {
+      "code": "N",
+      "name": "Non-Replenished"
+    },
+    "estimatedWeeklySales": null,
+    "isOrderedAsAssortment": true,
+    "similarStyleOrKeycode": null,
+    "abbreviatedDescription": "SPORTING WALKER DANIKA II",
+    "currentSourcingSummary": {
+      "vendor": {
+        "code": "V000182",
+        "name": "BETAFAC INDUSTRIES LTD",
+        "status": "Inactive",
+        "locality": "Overseas",
+        "packType": {
+          "code": "F",
+          "name": "Flat"
+        },
+        "incoterms": "INACT",
+        "vendorAgentType": [
+          {
+            "code": "KAS",
+            "name": "KAS – Vendor"
+          }
+        ],
+        "methodOfTransport": {
+          "code": "SEA",
+          "name": "Sea"
+        }
+      },
+      "homeCost": {
+        "cost": 7.1,
+        "currency": "USD"
+      },
+      "packType": {
+        "code": "F",
+        "name": "Flat"
+      },
+      "factories": [],
+      "unitsPerInner": 12,
+      "innersPerOuter": 1,
+      "kmartSuppliers": {
+        "australia": {
+          "agentName": "KAS PTY LIMITED (HKG)              ",
+          "isKasAgent": true,
+          "agentNumber": 584227,
+          "supplierNumber": 516891
+        },
+        "newZealand": {
+          "agentName": "KAS PTY LIMITED (HKG)              ",
+          "isKasAgent": true,
+          "agentNumber": 584227,
+          "supplierNumber": 516891
+        }
+      },
+      "containerQuantity": null,
+      "dssSourcingRecord": {
+        "refNo": "D001Y11M05-000794SR",
+        "version": 1,
+        "workFlowStatus": "Production"
+      },
+      "isShelfReadyShipper": null,
+      "productLeadTimeDays": 0,
+      "totalCartonQuantity": 12,
+      "minimumOrderQuantity": 0,
+      "destinationCostAndSell": {
+        "australia": {
+          "currency": "AUD",
+          "elcExGst": 7.8263,
+          "elcIncGst": 8.6089,
+          "gstPercentage": 9,
+          "sellPriceExGst": 4.5455,
+          "sellPriceIncGst": 5,
+          "marginPercentage": -0.72178
+        },
+        "newZealand": {
+          "currency": "NZD",
+          "elcExGst": 10.4717,
+          "elcIncGst": 12.0425,
+          "gstPercentage": 13,
+          "sellPriceExGst": 13.0435,
+          "sellPriceIncGst": 15,
+          "marginPercentage": 0.19716666666666666
+        }
+      },
+      "isFullContainerShipment": false,
+      "minimumOrderQuantityType": {
+        "code": "U",
+        "name": "Units"
+      }
+    },
+    "styleOrKeycodeToReplace": null,
+    "sizeRangeDimensionsDescription": "6-10",
+    "type": "AP"
+  },
+  "metadata": {
+    "source": "dss-plus",
+    "eventId": "2018-12-12T09:53:41.716Z-D001Y11M05-000794",
+    "eventType": "dss-product-changed",
+    "timestamp": "2018-12-12T09:53:41.716Z",
+    "causationId": "2018-12-12T09:53:41.716Z-D001Y11M05-000794",
+    "correlationId": "cecfb840-fdf3-11e8-8c27-a5d727f24696"
+  },
+  "source": "core-data-service"
+}

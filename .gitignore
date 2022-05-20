@@ -1,0 +1,21 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/kr-range-service/node_modules
+/kr-range-service/node_modules/*
+/.pnp
+.pnp.js
+
+
+/kr-range-service/coverage
+/kr-range-service/test-coverage
+/kr-range-service/build*/*
+node_modules
+
+# misc
+.DS_Store
+
+/kr-range-service/npm-debug.log*
+/kr-range-service/yarn-debug.log*
+/kr-range-service/yarn-error.log*
+yarn-error.log*
