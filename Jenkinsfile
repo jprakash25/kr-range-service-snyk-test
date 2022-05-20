@@ -14,6 +14,23 @@ pipeline {
     DOCKER_IMAGE_TAG="${env.BUILD_TAG}"
   }
   stages {
+    stage ('Snyk Test') {
+      environment {
+        ENVIRONMENT = 'dev'
+      }
+      steps {
+        script {
+          node {
+            // Snyk Plugin Test
+            sh 'npm install add snyk'
+            sh 'snyk auth [e5482745-a640-4dcb-9fa3-5e9f0f5b6601]'
+            sh 'snyk test'
+          }
+        }
+      }
+    }
+  } 
+  stages {
     stage ('Parallel Infrastructure Linting') {
       environment {
         ENVIRONMENT = 'dev'
